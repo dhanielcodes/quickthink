@@ -15,7 +15,8 @@ let routes = [
 ]
 
 let router = new VueRouter({
-  routes
+  routes,
+  mode: 'history'
 })
 
 Vue.component('QuickThinkHead', HeaderHome)
