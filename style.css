@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    background-color: #18C5D9;
+}
+body.open{
+    overflow: hidden;
+}
