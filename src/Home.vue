@@ -1,9 +1,8 @@
 <template>
   <div>
-    <router-view></router-view>
-<!--     <QuickThinkHead></QuickThinkHead>
+    <QuickThinkHead></QuickThinkHead>
     <instructions></instructions>
-    <Customize></Customize> -->
+    <Customize></Customize>
   </div>
 </template>
 

@@ -1,10 +1,5 @@
 <template>
-  <div>
-    <router-view></router-view>
-<!--     <QuickThinkHead></QuickThinkHead>
-    <instructions></instructions>
-    <Customize></Customize> -->
-  </div>
+    <h1>About</h1>
 </template>
 
 <script>
