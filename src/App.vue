@@ -2,7 +2,7 @@
   <div>
     <QuickThinkHead></QuickThinkHead>
     <Instructions></Instructions>
-    <Customize></Customize>
+    <MoreInfo></MoreInfo>
   </div>
 </template>
 
