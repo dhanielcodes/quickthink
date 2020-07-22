@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <Nav></Nav>
-    <router-view></router-view>
-  </div>
+    <h1>Categories</h1>
 </template>
 
 <script>
