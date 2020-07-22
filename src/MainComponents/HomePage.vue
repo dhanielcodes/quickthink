@@ -2,7 +2,6 @@
   <div>
     <QuickThinkHead></QuickThinkHead>
     <instructions></instructions>
-    <Customize></Customize>
   </div>
 </template>
 

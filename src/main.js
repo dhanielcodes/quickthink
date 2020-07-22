@@ -13,10 +13,9 @@ import HomePage from './MainComponents/HomePage.vue'
 //--SECTIONS HOME
 import HeaderHome from './homePage/HeaderHome.vue'
 import GettingStarted from './homePage/GettingStarted.vue'
-import Customization from './homePage/Customization.vue'
 Vue.component('QuickThinkHead', HeaderHome)
 Vue.component('Instructions', GettingStarted)
-Vue.component('Customize', Customization)
+
 
 //IMPORTED ABOUT COMPONENTS
 import AboutPage from './MainComponents/AboutPage.vue'
@@ -32,7 +31,7 @@ import CategoriesPage from './MainComponents/CategoriesPage.vue'
 //--SECTIONS CATEGORIES
 
 
-//ROUTER
+//ROUTER FOR THE SINGLE PAGE SITE
 Vue.use(VueRouter)
 
 let routes = [
