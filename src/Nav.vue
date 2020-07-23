@@ -9,9 +9,9 @@
       <ul v-bind:class="{open: open}">
         <div  id="nav-links">
            <router-link to="/"><li><a href="">Home</a></li></router-link> 
-            <router-link to="/categories"><li><a href="">Categories</a></li></router-link> 
-            <router-link to="/leaderboard"><li><a href="">Leaderboard</a></li></router-link> 
-           <router-link to="/about"><li><a href="">About</a></li></router-link> 
+            <router-link to="/categories"><li><a>Categories</a></li></router-link> 
+            <router-link to="/leaderboard"><li><a>Leaderboard</a></li></router-link> 
+           <router-link to="/about"><li><a>About</a></li></router-link> 
         </div>
         <div class="entries">
           <router-link to="/login"><a href="#" class="login">Login</a></router-link>
@@ -24,17 +24,20 @@
 </template>
 
 <script>
+
+
 export default {
   data () {
     return {
-       open: false
+       open: false,
+       
     }
   },
   methods: {
-    greet: () => {
-    }
+    
   }
 }
+
 </script>
 
 <style scoped>

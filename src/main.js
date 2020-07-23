@@ -6,6 +6,10 @@ import App from './App.vue'
 import Nav from './Nav.vue'
 Vue.component('Nav', Nav)
 
+//FOOTER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
+import Footer from './Footer.vue'
+Vue.component('Footer', Footer)
+
 //ALL COMPONENTS MAKING THE PAGE 
 
 //IMPORTED HOME COMPONENTS
@@ -13,8 +17,12 @@ import HomePage from './MainComponents/HomePage.vue'
 //--SECTIONS HOME
 import HeaderHome from './homePage/HeaderHome.vue'
 import GettingStarted from './homePage/GettingStarted.vue'
+import Download from './homePage/Download.vue'
 Vue.component('QuickThinkHead', HeaderHome)
 Vue.component('Instructions', GettingStarted)
+Vue.component('Download', Download)
+
+
 
 
 //IMPORTED ABOUT COMPONENTS
@@ -54,4 +62,6 @@ new Vue({
   router,
   render: h => h(App)
 })
+
+
 
