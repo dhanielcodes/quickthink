@@ -272,13 +272,13 @@ export default {
   padding: 20px;
 
   background: #18C5D9;
-  color: white;
+  color: rgb(255, 255, 255);
   outline: none;
   border: none;
   margin-top: 30px;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 15px;
+  font-size: 20px;
   transition: all .5s;
 }
 .btn:hover{
