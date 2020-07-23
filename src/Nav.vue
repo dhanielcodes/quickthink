@@ -8,14 +8,14 @@
       <div v-bind:href="web" class="logo">Quick<span>Think</span></div>
       <ul v-bind:class="{open: open}">
         <div  id="nav-links">
-           <router-link to="/"><li><a href="">Home</a></li></router-link> 
-            <router-link to="/categories"><li><a>Categories</a></li></router-link> 
-            <router-link to="/leaderboard"><li><a>Leaderboard</a></li></router-link> 
-           <router-link to="/about"><li><a>About</a></li></router-link> 
+           <router-link to="/"><li><a href="" v-on:click="remove">Home</a></li></router-link> 
+            <router-link to="/categories"><li><a v-on:click="remove">Categories</a></li></router-link> 
+            <router-link to="/leaderboard"><li><a v-on:click="remove">Leaderboard</a></li></router-link> 
+           <router-link to="/about"><li><a v-on:click="remove">About</a></li></router-link> 
         </div>
         <div class="entries">
-          <router-link to="/login"><a href="#" class="login">Login</a></router-link>
-         <router-link to="/signup"> <a href="#" class="sign-up">Sign-up</a></router-link>
+          <router-link to="/login"><a href="#" class="login" v-on:click="remove">Login</a></router-link>
+         <router-link to="/signup"> <a href="#" class="sign-up" v-on:click="remove">Sign-up</a></router-link>
         </div>
       </ul>
       
@@ -34,7 +34,9 @@ export default {
     }
   },
   methods: {
-    
+    remove: function(){
+      this.open = false
+    }
   }
 }
 
