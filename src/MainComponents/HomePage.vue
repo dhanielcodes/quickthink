@@ -1,7 +1,8 @@
 <template>
   <div>
-    <Nav></Nav>
-    <router-view></router-view>
+    <QuickThinkHead></QuickThinkHead>
+    <instructions></instructions>
+    <Customize></Customize>
   </div>
 </template>
 

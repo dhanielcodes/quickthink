@@ -1,26 +1,6 @@
 <template>
   <header>
     <img  class="b-g" src="../assets/images/vector 14.svg" alt="">
-    <div v-on:click="open = !open" class="burger">
-      <span>&nbsp;</span>
-      <span>&nbsp;</span>
-      </div>
-    <nav>
-      <div class="logo">Quick<span>Think</span></div>
-      <ul v-bind:class="{open: open}">
-        <div  id="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Leaderboard</a></li>
-            <li><a href="#">About</a></li>
-        </div>
-        <div class="entries">
-          <a href="#" class="login">Login</a>
-          <a href="#" class="sign-up">Sign-up</a>
-        </div>
-      </ul>
-      
-    </nav>
     <main>
       <aside>
         <h1 class="push">How good are you ?<br>Let's find out..</h1>
@@ -62,7 +42,7 @@ export default {
   data () {
     return {
       name: 'Header',
-      open: false
+      
     }
   },
   methods: {
@@ -231,8 +211,6 @@ main a{
 }
 main .a{
   transition: all .5s;
-  background: chartreuse;
-  width: 167px;
 }
 main .a:hover{
   transform: rotate(-4deg);
@@ -304,59 +282,7 @@ main .a:hover{
   width: 167px;
   margin: 0 auto;
   }
-  .burger{
-    display: block;
-    position: fixed;
-    top: 30px;
-    right: 20px;
-    width: 40px;
-    height: auto;
-    z-index: 8;
-    cursor: pointer;
-  }
-  .burger span{
-    width: 100%;
-    height: 2px;
-    border-radius: 40px;
-    background: #1C1046;
-    display: block;
-    margin-bottom: 5px;
-  }
-  nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-  }
-  nav ul{
-  position: fixed;
-  top: 0;
-  left: 0;
-  align-items: center;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  height: 100vh;
-  z-index: 9;
-  flex-direction: column;
-  background: #18C5D9;
-  transform: translateY(-100%);
-  transition: all .5s
-}
-ul.open{
-  transform: translateY(0%);
-}
-#nav-links{
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 80%;
-}
-nav ul li a{
-  font-size: 25px;
-}
+  
 }
 
 
