@@ -73,6 +73,7 @@ form .email button{
   padding: 15px;
   color: white;
   font-size: 18px;
+  cursor: pointer;
   width: 30%;
 }
 ::placeholder{
