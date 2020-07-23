@@ -3,9 +3,9 @@
   <section>
     <h1 class="h1">Getting Started?</h1>
     <main>
-      <img src="../assets/images/3 66.svg" alt="">
+      <img src="../assets/images/366.svg" alt="">
       <div class="instructions">
-      <img src="../assets/images/Group 81 (1).svg" alt="">
+      <img src="../assets/images/Group81(1).svg" alt="">
       <div class="content">
           <div class="step">
             <h1>Create Game</h1>
@@ -38,12 +38,12 @@
   <aside>
     <h1>Customize Your Game</h1>
     <div class="cards">
-      <img src="../assets/images/Frame 7 1.svg" alt="" srcset="">
+      <img src="../assets/images/Frame71.svg" alt="" srcset="">
       <div class="mid">
-        <img src="../assets/images/Frame 4 1.svg" alt="" srcset="">
-        <img src="../assets/images/Frame 5 1.svg" alt="" srcset="">
+        <img src="../assets/images/Frame41.svg" alt="" srcset="">
+        <img src="../assets/images/Frame51.svg" alt="" srcset="">
       </div>
-      <img src="../assets/images/Frame 6 1.svg" alt="" srcset="">
+      <img src="../assets/images/Frame61.svg" alt="" srcset="">
     </div>
     <div class="join">
       <h1>Join thousands of players</h1>
