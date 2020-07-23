@@ -92,7 +92,7 @@ form input{
   margin: 10px auto;
   outline: none;
   border-radius: 8px;
-  border: 2px solid #0f0a2457;
+  border: 1px solid #0f0a2457;
   font-size: 20px;
 }
 form textarea{
@@ -102,7 +102,7 @@ form textarea{
   margin: 10px auto;
   outline: none;
   border-radius: 8px;
-  border: 2px solid #0f0a2457;
+  border: 1px solid #0f0a2457;
   font-size: 20px;
 }
 form button{
