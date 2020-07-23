@@ -6,7 +6,7 @@
        <input type="name" placeholder="Name">
        <input type="password" placeholder="Password">
        <button>Login</button>
-       <p>Don't have an account? <router-link to="/login"><a href="">Create account</a></router-link> </p>
+       <p>Don't have an account? <router-link to="/signup"><a href="">Create account</a></router-link> </p>
     </form>
 </div>
 </template>
