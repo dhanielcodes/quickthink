@@ -1,5 +1,6 @@
 <template>
-  <footer>
+<footer>
+  <main>
         <div class="cpop">
             <div class="cpo">
                 <ul>
@@ -37,10 +38,13 @@
                     </ul>
             </div>
         </div>
+  </main>
+  <div class="copy-right">
+      <p>Copyright @ QuickThink team 2020</p>
+  </div>
+</footer>
 
 
-  
-  </footer>
 </template>
 
 <script>
@@ -60,6 +64,12 @@ export default {
 
 <style scoped>
 footer{
+    font-family: 'DM sans';
+    height: auto;
+    background: #1C1046;
+    color: white;
+}
+main{
     height: auto;
     font-family: 'DM sans';
     color: white;
@@ -68,31 +78,31 @@ footer{
     display: flex;
     justify-content: space-around;
 }
-footer .cpop{
+main .cpop{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
 }
-footer .cpop:nth-child(2){
+main .cpop:nth-child(2){
     display: flex;
     width: 50%;
     justify-content: space-between;
     flex-direction: row;
 }
-footer .cpo{
+main .cpo{
     margin: 10px;
 }
-footer .cpo ul{
+main .cpo ul{
     list-style: none;
 }
-footer ul li{
+main ul li{
     margin-bottom: 10px;
     font-weight: 100;
 }
-footer ul li h1{
+main ul li h1{
     font-weight: 100;
 }
-footer ul li a{
+main ul li a{
     text-decoration: none;
     color: white;
     position: relative;
@@ -112,15 +122,21 @@ a:hover::after{
     width: 100%;
     opacity: 1;
 }
+.copy-right{
+    width: 100%;
+    border-top: 1px solid rgba(229, 229, 229, 0.2);;
+    padding: 40px 0;
+    text-align: center;
+}
 @media screen and (max-width: 1117px){
-    footer .cpop:nth-child(2){
+    main .cpop:nth-child(2){
     display: flex;
     width: auto;
     justify-content: space-between;
     flex-direction: column;
 }
 @media screen and (max-width: 767px){
-footer{
+main{
     flex-direction: column;
     align-items: center;
     text-align: center;

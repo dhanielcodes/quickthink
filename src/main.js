@@ -31,18 +31,24 @@ import AboutPage from './MainComponents/AboutPage.vue'
 
 //IMPORTED LEADER-BOARD COMPONENTS
 import LeaderBoardPage from './MainComponents/LeaderBoardPage.vue'
-//--SECTIONS LEADER-BOARD
 
 
 //IMPORTED CATEGORIES COMPONENTS
 import CategoriesPage from './MainComponents/CategoriesPage.vue'
 //--SECTIONS CATEGORIES
 
+//IMPORTED LOGIN 
+import LoginPage from './MainComponents/LoginPage.vue'
+
+//IMPORTED SIGNUP
+import SignupPage from './MainComponents/SignupPage.vue'
 
 //ROUTER FOR THE SINGLE PAGE SITE
 Vue.use(VueRouter)
 
 let routes = [
+  {path: '/login', component: LoginPage},
+  {path: '/signup', component: SignupPage},
   {path: '/about', component: AboutPage},
   {path: '/leaderBoard', component: LeaderBoardPage},
   {path: '/categories', component: CategoriesPage},
