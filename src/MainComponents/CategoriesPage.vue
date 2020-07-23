@@ -141,7 +141,6 @@ export default {
 
   header {
     background-color: #1c1046;
-    max-height: 250px;
   }
 
   header h1 {

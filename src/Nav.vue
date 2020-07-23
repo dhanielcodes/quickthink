@@ -1,5 +1,6 @@
 <template>
     <div>
+      <div class="space"></div>
          <div v-on:click="open = !open" class="burger">
       <span>&nbsp;</span>
       <span>&nbsp;</span>
@@ -43,6 +44,9 @@ export default {
 </script>
 
 <style scoped>
+.space{
+  height: 74px;
+}
 .burger{
   display: none;
 }
@@ -53,10 +57,12 @@ nav{
   padding: 25px 0;
   font-family: "DM sans";
   background: white;
- position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   transition: all .6s;
   z-index: 4;
-
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.288);
 }
 /* NAV LOGO FOR NAV LOGO */

@@ -110,7 +110,13 @@ form .email button{
     padding: 0 10px;
   }
    form .email {
-    width: 370px;
+    width: 95%;
+  }
+  form .email input{
+    width: 60%;
+  }
+  form .email button{
+    width: 40%;
   }
 }
 </style>
