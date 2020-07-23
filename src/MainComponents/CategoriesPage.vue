@@ -100,11 +100,23 @@
 
         </div>
 
-        <form action="POST">
+        <form class="form" action="POST">
             <input type="button" value="Create New Category">
         </form>
           
       </div>
+
+
+      <form class='forms' action="e">
+        <h1>News Letter</h1>
+        <p>
+          Subscribe to our newsletter and never miss out on our regular updates,<br>
+          feature notification and leaderboard standings
+        </p>
+        <div class="email">
+          <input type="email" placeholder="Email Address"><button>Subscribe</button>
+        </div>
+      </form>
 
 
     </div>
@@ -248,11 +260,11 @@ export default {
     margin-right: 20px;
   }
 
-  form {
+  .form {
     padding-top: 70px;
   }
 
-  form input {
+  .form input {
     cursor: pointer;
     padding: 13px 30px;
     background-color: #18c5d9;
@@ -267,8 +279,65 @@ export default {
     transition: all .5s;
   }
 
-  form input:hover{
+  .form input:hover{
   transform: rotate(-4deg);
+  }
+
+  .forms {
+    width: 90%;
+    padding: 100px 0;
+    background-color: #1C1046;
+    color: #fff;
+    margin: 100px auto;
+    text-align: center;
+  }
+
+  .forms h1{
+    font-size: 45px;
+    font-family: 'DM sans';
+    transform: translatey(-30px);
+  }
+
+  .forms p{
+    font-size: 20px;
+    font-family: 'DM sans';
+    margin-bottom: 40px;
+  }
+
+  .forms .email {
+    position: relative;
+    width: 60%;
+    background: white;
+    padding: 5px;
+    margin: auto;
+    border-radius: 5px;
+  }
+
+  .forms .email input{
+    width: 70%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'DM sans';
+    background: white;
+  }
+
+  .forms .email button{
+    border-radius: 5px;
+    background: #18C5D9;
+    font-family: 'DM sans';
+    border: none;
+    outline: none;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    width: 30%;
+  }
+  ::placeholder{
+    font-family: 'DM sans';
+    font-size: 18px;
   }
 
   @media only screen and (max-width: 970px){
@@ -277,10 +346,29 @@ export default {
     }
   }
 
+  @media only screen and (max-width: 720px) {
+
+    
+    
+    .email button {
+      font-size: 15px;
+    }
+  }
+
   @media only screen and (max-width: 550px){
     header h1 {
       font-size: 30px;
     }
+
+    .forms h1 {
+      font-size: 30px;
+    }
+
+    .forms p {
+      font-size: 15px;
+    }
+
+    
   }
 
   </style>
