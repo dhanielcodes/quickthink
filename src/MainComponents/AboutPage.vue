@@ -120,4 +120,14 @@ form button{
   font-family: 'poppins';
   font-size: 20px;
 }
+@media screen and (max-width: 674px){
+  form h1{
+  font-size: 36px;
+  }
+  form .input{
+  width: 100%;
+  padding: 0 10px;
+  margin: 50px auto;
+}
+}
 </style>
