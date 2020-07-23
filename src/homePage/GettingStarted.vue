@@ -80,6 +80,7 @@ section{
   color: white;
   overflow: hidden;
   padding: 20px 0;
+  overflow: hidden;
 }
 .h1{
   text-align: center;
@@ -117,7 +118,7 @@ aside{
   font-family: 'DM sans';
   padding: 100px 0;
   text-align: center;
-  
+  overflow: hidden;
 }
 .cards{
   margin-top: 100px;
