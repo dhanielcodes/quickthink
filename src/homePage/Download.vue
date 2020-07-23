@@ -12,7 +12,7 @@
           </p>
           <div class="get items">
             <h1>Get App Now!</h1>
-            <img src="../assets/images/1280px-Google_Play_Store_badge_EN1.svg" alt="">
+            <a href=""><img src="../assets/images/1280px-Google_Play_Store_badge_EN1.svg" alt=""></a>
           </div>
       </div>
   </main>
