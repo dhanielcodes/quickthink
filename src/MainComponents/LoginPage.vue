@@ -1,9 +1,7 @@
 <template>
-  <div>
-    <Nav></Nav>
-    <router-view></router-view>
-    <Footer></Footer>
-  </div>
+<div>
+    <h1>Login</h1>
+</div>
 </template>
 
 <script>
@@ -20,6 +18,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+div{
+  height: 100vh;
+}
 </style>

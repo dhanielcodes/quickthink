@@ -2,7 +2,7 @@
   <div>
     <QuickThinkHead></QuickThinkHead>
     <instructions></instructions>
-    <Customize></Customize>
+    <Download></Download>
   </div>
 </template>
 
@@ -20,6 +20,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
 
 </style>
