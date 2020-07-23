@@ -101,7 +101,7 @@
         </div>
 
         <form class="form" action="POST">
-            <input type="button" value="Create New Category">
+            <input class="btn" type="button" value="Create New Category">
         </form>
           
       </div>
@@ -138,7 +138,7 @@ export default {
 
 
 <style scoped>
-h1{
+header h1{
   animation:aa  2s 0s 1 forwards;
 }
 @keyframes aa {
@@ -275,99 +275,102 @@ h1{
     margin-right: 20px;
   }
 
-  .form {
-    padding-top: 70px;
-  }
-
-  .form input {
-    cursor: pointer;
-    padding: 13px 30px;
-    background-color: #18c5d9;
-    color: #fff;
-    box-shadow: 0px 8px 20px rgba(28, 16, 70, 0.12);
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    font-size: 15px;
-    font-family: 'Poppins';
-    font-weight: bold;
-    transition: all .5s;
-  }
-
-  .form input:hover{
+/* FORM NEWSLETTER */
+.forms{
+  width: 90%;
+  padding: 100px 0;
+  background-color: #1C1046;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'DM sans';
+  margin: 100px auto;
+}
+.forms h1{
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+.forms p{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.forms .email {
+  position: relative;
+  width: 600px;
+  background: white;
+  padding: 5px;
+  margin: auto;
+  border-radius: 5px;
+}
+.forms .email input{
+  width: 70%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'DM sans';
+  background: white;
+}
+.forms .email button{
+  border-radius: 5px;
+  background: #18C5D9;
+  font-family: 'DM sans';
+  border: none;
+  outline: none;
+  padding: 15px;
+  color: white;
+  font-size: 18px;
+  width: 30%;
+}
+.btn{
+  width: 100%;
+  padding: 20px;
+  background: #18C5D9;
+  color: white;
+  outline: none;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 20px;
+  transition: all .5s;
+}
+.btn:hover{
   transform: rotate(-4deg);
-  }
-
-  .forms {
-    width: 90%;
-    padding: 100px 0;
-    background-color: #1C1046;
-    color: #fff;
-    margin: 100px auto;
-    text-align: center;
-  }
-
-  .forms h1{
-    font-size: 45px;
-    font-family: 'DM sans';
-    transform: translatey(-30px);
-  }
-
-  .forms p{
-    font-size: 20px;
-    font-family: 'DM sans';
-    margin-bottom: 40px;
-  }
-
-  .forms .email {
-    position: relative;
-    width: 60%;
-    background: white;
-    padding: 5px;
-    margin: auto;
-    border-radius: 5px;
-  }
-
-  .forms .email input{
-    width: 70%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-family: 'DM sans';
-    background: white;
-  }
-
-  .forms .email button{
-    border-radius: 5px;
-    background: #18C5D9;
-    font-family: 'DM sans';
-    border: none;
-    outline: none;
-    padding: 15px;
-    color: white;
-    font-size: 18px;
-    width: 30%;
-  }
-  ::placeholder{
-    font-family: 'DM sans';
-    font-size: 18px;
-  }
+}
+::placeholder{
+  font-family: 'DM sans';
+  font-size: 18px;
+}
 
   @media only screen and (max-width: 970px){
     header h1 {
       margin-top: 60px;
     }
+    .forms{
+      width: 95%;
+      padding: 100px 0;
+      background-color: #1C1046;
+      color: white;
+      height: auto;
+      margin: 100px auto;
+    }
   }
 
   @media only screen and (max-width: 720px) {
-
-    
-    
     .email button {
       font-size: 15px;
     }
+    .forms{
+      width: 100%;
+      border-radius: 0px;
+      margin: 100px 0px;
+      overflow: hidden;
+  }
+  .forms .email {
+    width: 95%;
+  }
   }
 
   @media only screen and (max-width: 550px){
@@ -376,12 +379,15 @@ h1{
     }
 
     .forms h1 {
-      font-size: 30px;
+      font-size: 40px;
     }
 
     .forms p {
-      font-size: 15px;
+      font-size: 17px;
     }
+   .forms .email {
+    width: 370px;
+  }
 
     
   }
