@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img  class="b-g" src="../assets/images/vector 14.svg" alt="">
+    <img  class="b-g" src="../assets/images/vector14.svg" alt="">
     <main>
       <aside>
         <h1 class="push">How good are you ?<br>Let's find out..</h1>
@@ -9,19 +9,19 @@
         <a href="#">Play game</a> 
         </div>
       </aside>
-      <img class="main-img" src="../assets/images/1 996.svg" alt="">
+      <img class="main-img" src="../assets/images/1996.svg" alt="">
     </main>
     <div class="cards">
       <div class="card">
-        <img src="../assets/images/Onboarding design 2.svg" alt="">
+        <img src="../assets/images/Onboardingdesign2.svg" alt="">
         <p>choose any number of<br> questions you want to<br> answer</p>
       </div>
       <div class="card">
-        <img src="../assets/images/Onboarding design 3.svg" alt="">
+        <img src="../assets/images/Onboardingdesign3.svg" alt="">
         <p>Get points based on the<br> difficulty level you<br> choose</p>
       </div>
       <div class="card">
-        <img src="../assets/images/Onboarding design 4.svg" alt="">
+        <img src="../assets/images/Onboardingdesign4.svg" alt="">
         <p>Share with <br> your friends</p>
       </div>
     </div>

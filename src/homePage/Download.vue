@@ -1,7 +1,7 @@
 <template>
 <div>
   <main>
-      <img class="main-img" src="../assets/images/2 5.svg" alt="" srcset="">
+      <img class="main-img" src="../assets/images/25.svg" alt="" srcset="">
       <div class="content">
           <h1 class="items">Now on<br>Google Playstore</h1>
           <p class="items">
@@ -12,7 +12,7 @@
           </p>
           <div class="get items">
             <h1>Get App Now!</h1>
-            <img src="../assets/images/1280px-Google_Play_Store_badge_EN 1.svg" alt="">
+            <img src="../assets/images/1280px-Google_Play_Store_badge_EN1.svg" alt="">
           </div>
       </div>
   </main>
