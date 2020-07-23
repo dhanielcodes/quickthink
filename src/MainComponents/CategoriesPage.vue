@@ -262,9 +262,15 @@ export default {
   }
 
 
+.form {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
 .btn{
   width: 100%;
   padding: 20px;
+
   background: #18C5D9;
   color: white;
   outline: none;
@@ -272,7 +278,7 @@ export default {
   margin-top: 30px;
   cursor: pointer;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 15px;
   transition: all .5s;
 }
 .btn:hover{
