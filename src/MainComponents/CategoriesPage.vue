@@ -100,7 +100,7 @@
 
         </div>
 
-        <form class="form" action="POST">
+        <form class="form" action="GET">
             <input type="button" value="Create New Category">
         </form>
           
