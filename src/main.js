@@ -2,6 +2,10 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 
+//IMPORT AXIOS LIBRARY(INSTALLED GLOABLLY)
+//window.axios  = require('axios');
+
+
 //NAV COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
 import Nav from './Nav.vue'
 Vue.component('Nav', Nav)
@@ -73,6 +77,4 @@ new Vue({
   router,
   render: h => h(App)
 })
-
-
 
