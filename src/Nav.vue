@@ -182,7 +182,7 @@ ul li a:hover::after{
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   z-index: 9;
   flex-direction: column;
   background: #18C5D9;
