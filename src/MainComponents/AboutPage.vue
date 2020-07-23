@@ -1,6 +1,6 @@
 <template>
 <main>
-    <h1>About</h1>
+    <h1 class="h1">About</h1>
     <p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros mauris cum risus semper est 
        facilisi in. Dolor feugiat adipiscing phasellus viverra bibendum tincidunt urna eu ac.
@@ -28,6 +28,15 @@
         odio laoreet aliquet fringilla vitae. Lectus cras sed cursus nunc eget augue mattis donec non. Pellentesque vitae 
         sagittis auctor ipsum et, lorem pharetra pretium.
     </p>
+    <form action="">
+      <h1>Contact Us?<br> Send Us a message</h1>
+      <div class="input">
+          <input type="name" placeholder="Full Name">
+          <input type="email" placeholder="Email Address">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message here.."></textarea>
+          <button>Send Message</button>
+      </div>
+    </form>
 </main>
 </template>
 
@@ -51,7 +60,7 @@ main{
   font-family: 'DM sans';
   text-align: center;
 }
-h1{
+.h1{
   width: 100%;
   font-size: 60px;
   padding: 110px 0;
@@ -62,5 +71,53 @@ h1{
 p{
   font-size: 20px;
   padding: 50px;
+}
+form{
+  width: auto;
+  border-radius: 10px;
+  height: auto;
+  padding: 15px;
+  margin: 50px auto;
+}
+form h1{
+  font-size: 46px;
+}
+form .input{
+  width: 600px;
+  margin: 50px auto;
+}
+form input{
+  width: 100%;
+  padding: 20px;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 8px;
+  border: 2px solid #0f0a2457;
+  font-size: 20px;
+}
+form textarea{
+  width: 100%;
+  padding: 20px;
+  height: 400px;
+  margin: 10px auto;
+  outline: none;
+  border-radius: 8px;
+  border: 2px solid #0f0a2457;
+  font-size: 20px;
+}
+form button{
+  width: 100%;
+  padding: 20px;
+  background: #18C5D9;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 20px;
+}
+::placeholder{
+  font-family: 'poppins';
+  font-size: 20px;
 }
 </style>
