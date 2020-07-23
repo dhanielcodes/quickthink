@@ -211,8 +211,6 @@ main a{
 }
 main .a{
   transition: all .5s;
-  background: chartreuse;
-  width: 167px;
 }
 main .a:hover{
   transform: rotate(-4deg);
