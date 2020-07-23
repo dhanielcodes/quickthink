@@ -4,7 +4,7 @@
       <span>&nbsp;</span>
       <span>&nbsp;</span>
       </div>
-    <nav>
+    <nav v-on:click="remove">
       <div v-bind:href="web" class="logo">Quick<span>Think</span></div>
       <ul v-bind:class="{open: open}">
         <div  id="nav-links">
