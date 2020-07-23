@@ -136,6 +136,21 @@ export default {
 }
 </script>
 
+
+<style scoped>
+h1{
+  animation:aa  2s 0s 1 forwards;
+}
+@keyframes aa {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+</style>
+=======
   <style scoped>
 
   header {
@@ -372,3 +387,4 @@ export default {
   }
 
   </style>
+

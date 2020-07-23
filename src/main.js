@@ -6,6 +6,10 @@ import App from './App.vue'
 import Nav from './Nav.vue'
 Vue.component('Nav', Nav)
 
+//FOOTER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
+import Footer from './Footer.vue'
+Vue.component('Footer', Footer)
+
 //ALL COMPONENTS MAKING THE PAGE 
 
 //IMPORTED HOME COMPONENTS
@@ -13,10 +17,13 @@ import HomePage from './MainComponents/HomePage.vue'
 //--SECTIONS HOME
 import HeaderHome from './homePage/HeaderHome.vue'
 import GettingStarted from './homePage/GettingStarted.vue'
-import Customization from './homePage/Customization.vue'
+import Download from './homePage/Download.vue'
 Vue.component('QuickThinkHead', HeaderHome)
 Vue.component('Instructions', GettingStarted)
-Vue.component('Customize', Customization)
+Vue.component('Download', Download)
+
+
+
 
 //IMPORTED ABOUT COMPONENTS
 import AboutPage from './MainComponents/AboutPage.vue'
@@ -24,18 +31,24 @@ import AboutPage from './MainComponents/AboutPage.vue'
 
 //IMPORTED LEADER-BOARD COMPONENTS
 import LeaderBoardPage from './MainComponents/LeaderBoardPage.vue'
-//--SECTIONS LEADER-BOARD
 
 
 //IMPORTED CATEGORIES COMPONENTS
 import CategoriesPage from './MainComponents/CategoriesPage.vue'
 //--SECTIONS CATEGORIES
 
+//IMPORTED LOGIN 
+import LoginPage from './MainComponents/LoginPage.vue'
 
-//ROUTER
+//IMPORTED SIGNUP
+import SignupPage from './MainComponents/SignupPage.vue'
+
+//ROUTER FOR THE SINGLE PAGE SITE
 Vue.use(VueRouter)
 
 let routes = [
+  {path: '/login', component: LoginPage},
+  {path: '/signup', component: SignupPage},
   {path: '/about', component: AboutPage},
   {path: '/leaderBoard', component: LeaderBoardPage},
   {path: '/categories', component: CategoriesPage},
@@ -55,4 +68,6 @@ new Vue({
   router,
   render: h => h(App)
 })
+
+
 

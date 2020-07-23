@@ -82,7 +82,6 @@ export default {
 </script>
 
 <style scoped>
-
 section{
   font-family: 'DM sans';
   height: auto;
@@ -122,7 +121,7 @@ section h1{
 
 /* ASIDE */
 aside{
-  height: 100vh;
+  height: auto;
   background: #ffffff;
   font-family: 'DM sans';
   padding: 100px 0;
@@ -174,7 +173,7 @@ form{
   padding: 100px 0;
   background-color: #1C1046;
   color: white;
-
+  border-radius: 10px;
   margin: 100px auto;
 }
 form h1{
@@ -217,6 +216,7 @@ form .email button{
   font-size: 18px;
 }
 
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 961px){
     main{
@@ -238,6 +238,7 @@ form .email button{
     padding: 100px 0;
     background-color: #1C1046;
     color: white;
+    height: auto;
     margin: 100px auto;
   }
   .mid{
@@ -252,7 +253,9 @@ form .email button{
 @media screen and (max-width: 731px){
   form{
     width: 100%;
+    border-radius: 0px;
     margin: 100px 0px;
+    overflow: hidden;
   }
   form .email {
     width: 95%;
@@ -271,6 +274,9 @@ form .email button{
   form p{
     font-size: 17px;
     padding: 0 10px;
+  }
+   form .email {
+    width: 370px;
   }
   section h1{
     font-size: 25px;
