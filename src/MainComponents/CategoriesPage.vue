@@ -106,17 +106,7 @@
           
       </div>
 
-
-      <form class='forms' action="e">
-        <h1>News Letter</h1>
-        <p>
-          Subscribe to our newsletter and never miss out on our regular updates,<br>
-          feature notification and leaderboard standings
-        </p>
-        <div class="email">
-          <input type="email" placeholder="Email Address"><button>Subscribe</button>
-        </div>
-      </form>
+       <Newsletter></Newsletter>
 
 
     </div>
@@ -136,9 +126,8 @@ export default {
 }
 </script>
 
-
-<style scoped>
-header h1{
+  <style scoped>
+  header h1{
   animation:aa  2s 0s 1 forwards;
 }
 @keyframes aa {
@@ -149,9 +138,6 @@ header h1{
     opacity: 1;
   }
 }
-</style>
-=======
-  <style scoped>
 
   header {
     background-color: #1c1046;
@@ -275,54 +261,7 @@ header h1{
     margin-right: 20px;
   }
 
-/* FORM NEWSLETTER */
-.forms{
-  width: 90%;
-  padding: 100px 0;
-  background-color: #1C1046;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  font-family: 'DM sans';
-  margin: 100px auto;
-}
-.forms h1{
-  font-size: 60px;
-  margin-bottom: 20px;
-}
-.forms p{
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.forms .email {
-  position: relative;
-  width: 600px;
-  background: white;
-  padding: 5px;
-  margin: auto;
-  border-radius: 5px;
-}
-.forms .email input{
-  width: 70%;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-size: 18px;
-  font-family: 'DM sans';
-  background: white;
-}
-.forms .email button{
-  border-radius: 5px;
-  background: #18C5D9;
-  font-family: 'DM sans';
-  border: none;
-  outline: none;
-  padding: 15px;
-  color: white;
-  font-size: 18px;
-  width: 30%;
-}
+
 .btn{
   width: 100%;
   padding: 20px;
@@ -339,55 +278,20 @@ header h1{
 .btn:hover{
   transform: rotate(-4deg);
 }
-::placeholder{
-  font-family: 'DM sans';
-  font-size: 18px;
-}
+
 
   @media only screen and (max-width: 970px){
     header h1 {
       margin-top: 60px;
     }
-    .forms{
-      width: 95%;
-      padding: 100px 0;
-      background-color: #1C1046;
-      color: white;
-      height: auto;
-      margin: 100px auto;
-    }
   }
 
-  @media only screen and (max-width: 720px) {
-    .email button {
-      font-size: 15px;
-    }
-    .forms{
-      width: 100%;
-      border-radius: 0px;
-      margin: 100px 0px;
-      overflow: hidden;
-  }
-  .forms .email {
-    width: 95%;
-  }
-  }
+
 
   @media only screen and (max-width: 550px){
     header h1 {
       font-size: 30px;
     }
-
-    .forms h1 {
-      font-size: 40px;
-    }
-
-    .forms p {
-      font-size: 17px;
-    }
-   .forms .email {
-    width: 370px;
-  }
 
     
   }
