@@ -5,7 +5,7 @@
       <span>&nbsp;</span>
       </div>
     <nav>
-      <div class="logo">Quick<span>Think</span></div>
+      <div v-bind:href="web" class="logo">Quick<span>Think</span></div>
       <ul v-bind:class="{open: open}">
         <div  id="nav-links">
            <router-link to="/"><li><a href="">Home</a></li></router-link> 
@@ -30,7 +30,7 @@ export default {
   data () {
     return {
        open: false,
-       
+       web: '/'
     }
   },
   methods: {
@@ -62,6 +62,7 @@ nav{
   color: #1C1046;
   font-size: 18px;
   font-weight: 400;
+  cursor: pointer;
 }
 .logo span{
   color: #18C5D9;
