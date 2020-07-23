@@ -6,6 +6,11 @@ import App from './App.vue'
 import Nav from './Nav.vue'
 Vue.component('Nav', Nav)
 
+
+//NEWSLETTER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
+import NewsLetter from './NewsLetter.vue'
+Vue.component('Newsletter', NewsLetter)
+
 //FOOTER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
 import Footer from './Footer.vue'
 Vue.component('Footer', Footer)

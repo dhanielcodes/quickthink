@@ -55,16 +55,7 @@
         <a href="#">Get started now</a>
         </div>
     </div>
-    <form action="e">
-    <h1>News Letter</h1>
-    <p>
-       Subscribe to our newsletter and never miss out on our regular updates,<br>
-       feature notification and leaderboard standings
-    </p>
-    <div class="email">
-      <input type="email" placeholder="Email Address"><button>Subscribe</button>
-    </div>
-  </form>
+    <Newsletter></Newsletter>
   </aside>
   
 </div>
@@ -167,54 +158,6 @@ a{
 .a:hover{
   transform: rotate(-4deg);
 }
-/* FORM NEWSLETTER */
-form{
-  width: 90%;
-  padding: 100px 0;
-  background-color: #1C1046;
-  color: white;
-  border-radius: 10px;
-  margin: 100px auto;
-}
-form h1{
-  font-size: 60px;
-}
-form p{
-  font-size: 20px;
-}
-form .email {
-  position: relative;
-  width: 600px;
-  background: white;
-  padding: 5px;
-  margin: auto;
-  border-radius: 5px;
-}
-form .email input{
-  width: 70%;
-  padding: 10px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  font-size: 18px;
-  font-family: 'DM sans';
-  background: white;
-}
-form .email button{
-  border-radius: 5px;
-  background: #18C5D9;
-  font-family: 'DM sans';
-  border: none;
-  outline: none;
-  padding: 15px;
-  color: white;
-  font-size: 18px;
-  width: 30%;
-}
-::placeholder{
-  font-family: 'DM sans';
-  font-size: 18px;
-}
 
 
 /* MEDIA QUERIES */
@@ -233,14 +176,7 @@ form .email button{
     width: 100%;
     padding: 0 10px;
   }
-  form{
-    width: 95%;
-    padding: 100px 0;
-    background-color: #1C1046;
-    color: white;
-    height: auto;
-    margin: 100px auto;
-  }
+
   .mid{
     display: flex;
     flex-direction: column;
@@ -250,33 +186,13 @@ form .email button{
     overflow: hidden;
   }
 }
-@media screen and (max-width: 731px){
-  form{
-    width: 100%;
-    border-radius: 0px;
-    margin: 100px 0px;
-    overflow: hidden;
-  }
-  form .email {
-    width: 95%;
-  }
-}
+
 @media screen and (max-width: 511px){
   .instructions img{
     width: 100px;
   }
   h1{
   font-size: 30px;
-  }
-  form h1{
-    font-size: 40px;
-  }
-  form p{
-    font-size: 17px;
-    padding: 0 10px;
-  }
-   form .email {
-    width: 370px;
   }
   section h1{
     font-size: 25px;
