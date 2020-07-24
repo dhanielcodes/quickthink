@@ -1,17 +1,18 @@
 <template>
     <div>
+      <div class="space"></div>
          <div v-on:click="open = !open" class="burger">
       <span>&nbsp;</span>
       <span>&nbsp;</span>
       </div>
-    <nav>
+    <nav v-on:click="remove">
       <div v-bind:href="web" class="logo">Quick<span>Think</span></div>
       <ul v-bind:class="{open: open}">
         <div  id="nav-links">
-           <router-link to="/"><li><a href="">Home</a></li></router-link> 
-            <router-link to="/categories"><li><a>Categories</a></li></router-link> 
-            <router-link to="/leaderboard"><li><a>Leaderboard</a></li></router-link> 
-           <router-link to="/about"><li><a>About</a></li></router-link> 
+           <router-link to="/" ><li>Home</li></router-link> 
+            <router-link class="router-link-active router-link-exact-active" to="/categories"><li>Categories</li></router-link> 
+            <router-link class="router-link-active router-link-exact-active" to="/leaderboard"><li>LeaderBoard</li></router-link> 
+           <router-link class="router-link-active router-link-exact-active" to="/about"><li>About</li></router-link> 
         </div>
         <div class="entries">
           <router-link to="/login"><a href="#" class="login">Login</a></router-link>
@@ -34,13 +35,20 @@ export default {
     }
   },
   methods: {
-    
+    remove: function(){
+      this.open = false
+    }
   }
 }
 
 </script>
 
 <style scoped>
+
+
+.space{
+  height: 74px;
+}
 .burger{
   display: none;
 }
@@ -51,10 +59,12 @@ nav{
   padding: 25px 0;
   font-family: "DM sans";
   background: white;
- position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   transition: all .6s;
   z-index: 4;
-
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.288);
 }
 /* NAV LOGO FOR NAV LOGO */
@@ -71,25 +81,30 @@ nav{
 nav ul{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 70%;
 }
 nav #nav-links{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 50%;
   
 }
 ul li{
   list-style: none;
 }
-ul li a{
+/* .router-link-exact-active{
+  color: #ffffff;
+} */
+.router-link-active{
   text-decoration: none;
   color: black;
-  padding-top: 16px;
+  padding: 10px 0;
   position: relative;
 }
 /* NAV A HOVER FOR NAV A HOVER */
-ul li a::after{
+.router-link-active::after{
   content: '';
   position: absolute;
   width: 0%;
@@ -101,7 +116,7 @@ ul li a::after{
   opacity: 0;
   transform: translateX();
 }
-ul li a:hover::after{
+.router-link-active:hover::after{
   width: 100%;
   opacity: 1;
   left: 0%;
@@ -109,6 +124,9 @@ ul li a:hover::after{
 /* NAV ENTRIES FOR NAV ENTRIES */
 .entries{
   width: auto;
+}
+.entries .router-link-active::after{
+  display: none;
 }
 .entries a{
   text-decoration: none;
@@ -182,7 +200,7 @@ ul li a:hover::after{
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   z-index: 9;
   flex-direction: column;
   background: #18C5D9;
@@ -199,8 +217,11 @@ ul.open{
   width: 100%;
   height: 80%;
 }
-nav ul li a{
+.router-link-active{
   font-size: 25px;
+}
+.entries .router-link-active{
+  font-size: 17px;
 }
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
 <main>
+  <header>
     <h1 class="h1">About</h1>
+  </header>
     <p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros mauris cum risus semper est 
        facilisi in. Dolor feugiat adipiscing phasellus viverra bibendum tincidunt urna eu ac.
@@ -60,12 +62,26 @@ main{
   font-family: 'DM sans';
   text-align: center;
 }
+  .h1{
+  animation:aa  2s 0s 1 forwards;
+}
+@keyframes aa {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+header{
+  background: #1C1046;
+}
 .h1{
   width: 100%;
-  font-size: 60px;
-  padding: 110px 0;
+  font-size: 50px;
+  padding: 60px 0;
   text-align: center;
-  background: #1C1046;
+
   color: white;
 }
 p{
@@ -104,6 +120,7 @@ form textarea{
   border-radius: 8px;
   border: 1px solid #0f0a2457;
   font-size: 20px;
+  font-family: 'DM sans';
 }
 form button{
   width: 100%;
@@ -128,6 +145,11 @@ form button{
   width: 100%;
   padding: 0 10px;
   margin: 50px auto;
+  }
 }
-}
+ @media only screen and (max-width: 550px){
+    header .h1 {
+      font-size: 30px ;
+    }
+ }
 </style>

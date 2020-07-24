@@ -12,7 +12,7 @@
           </p>
           <div class="get items">
             <h1>Get App Now!</h1>
-            <img src="../assets/images/1280px-Google_Play_Store_badge_EN1.svg" alt="">
+            <a href=""><img src="../assets/images/1280px-Google_Play_Store_badge_EN1.svg" alt=""></a>
           </div>
       </div>
   </main>
@@ -57,6 +57,10 @@ p{
 }
 .get img{
         margin-top: 20px;
+        transition: all .5s;
+}
+.get img:hover{
+    transform: rotate(-4deg);
 }
 @media screen and (max-width: 1062px) {
     main{

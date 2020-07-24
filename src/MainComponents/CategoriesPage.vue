@@ -141,7 +141,6 @@ export default {
 
   header {
     background-color: #1c1046;
-    max-height: 250px;
   }
 
   header h1 {
@@ -284,19 +283,9 @@ export default {
 .btn:hover{
   transform: rotate(-4deg);
 }
-
-
-  @media only screen and (max-width: 970px){
-    header h1 {
-      margin-top: 60px;
-    }
-  }
-
-
-
   @media only screen and (max-width: 550px){
     header h1 {
-      font-size: 30px;
+      font-size: 30px ;
     }
 
     
