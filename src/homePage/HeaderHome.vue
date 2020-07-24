@@ -97,7 +97,7 @@ main a{
   background: #18C5D9;
   color: white;
   font-size: 20px;
-  widows: 100%;
+  width: 100%;
   text-decoration: none;
   font-family: 'poppins';
   border-radius: 6px;
@@ -105,6 +105,7 @@ main a{
 }
 main .a{
   transition: all .5s;
+  width: 170px;
 }
 main .a:hover{
   transform: rotate(-4deg);

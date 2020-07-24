@@ -57,6 +57,10 @@ p{
 }
 .get img{
         margin-top: 20px;
+        transition: all .5s;
+}
+.get img:hover{
+    transform: rotate(-4deg);
 }
 @media screen and (max-width: 1062px) {
     main{
