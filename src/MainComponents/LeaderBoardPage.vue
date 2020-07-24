@@ -25,7 +25,7 @@
     </div>
 
     <div class="board-data" v-bind:is='fetchBoardData'>
-      <h1>Hello</h1>
+      
     </div>
 
      <Newsletter></Newsletter>
