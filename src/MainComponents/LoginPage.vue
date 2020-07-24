@@ -34,15 +34,15 @@ export default {
 
         console.log(existingUser)
 
-        // axios.post('http://brainteaser.pythonanywhere.com/user/login')
-        // .then((response) => {
-        //   console.log(response);
-        //   alert('Successful');
-        // })
-        // .catch((error) => {
-        //   console.log(error);
-        //   alert('Login has failed!');
-        // });
+        axios.post('http://brainteaser.pythonanywhere.com/user/login')
+        .then((response) => {
+          console.log(response);
+          alert('Successful');
+        })
+        .catch((error) => {
+          console.log(error);
+          alert('Login has failed!');
+        });
       }
     }
   }

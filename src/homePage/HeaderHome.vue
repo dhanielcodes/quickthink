@@ -1,12 +1,12 @@
 <template>
   <header>
-    <img  class="b-g" src="../assets/images/vector14.svg" alt="">
+    <img  class="b-g" src="../assets/images/Vector14.svg" alt="">
     <main>
       <aside>
         <h1 class="push">How good are you ?<br>Let's find out..</h1>
         <p class="push">Challenge your brain into thinking, think fast, beat the best of<br>the best in this trilling game</p>
         <div class="a">
-        <a href="#">Play game</a> 
+        <a href="#">Play game</a>
         </div>
       </aside>
       <img class="main-img" src="../assets/images/1996.svg" alt="">
@@ -30,7 +30,7 @@
 
 <script>
 //import func from '../../vue-temp/vue-editor-bridge'
- 
+
 window.addEventListener('scroll', () => {
   let bh =  document.querySelector('.main-img')
 
@@ -42,11 +42,11 @@ export default {
   data () {
     return {
       name: 'Header',
-      
+
     }
   },
   methods: {
-  
+
   }
 }
 </script>
@@ -75,7 +75,7 @@ main{
   align-items: center;
   height: 100vh;
  overflow: hidden;
- 
+
 }
 .main-img{
  position: relative;
@@ -120,7 +120,7 @@ main .a:hover{
   margin-bottom: 50px;
 }
 .cards .card{
-    width: 350px;  
+    width: 350px;
     height: 450px;
     display: grid;
     place-items: center;
@@ -148,7 +148,7 @@ main .a:hover{
   .b-g{
     width: 40%;
   }
- 
+
   .main-img{
     width: 350px;
   }
@@ -174,11 +174,10 @@ main .a:hover{
   }
   main .a{
   transition: all .5s;
-  background: chartreuse;
   width: 167px;
   margin: 0 auto;
   }
-  
+
 }
 
 
