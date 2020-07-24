@@ -25,8 +25,8 @@
     </div>
 
     <div class="board-data" v-bind:is='fetchBoardData'>
-        <ul id="v-for-board">
-          <li v-for="boards in board" :key="boards.user_name">
+        <ul>
+          <li v-repeat="boards in board">
             {{ boards.user_name }} 
           </li>
         </ul>
@@ -57,7 +57,7 @@ export default {
         console.log(response);
         alert('working');
         //this.data = response.data;
-        this.board = response;
+        this.board = response.data;
         this.loading = false;
       })
       .catch((error) => {
