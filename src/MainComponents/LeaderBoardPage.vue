@@ -8,15 +8,15 @@
 
       <div class="trophies">
          
-        <div class="silver">
+        <div class="silver trophy">
            <img src="../assets/images/silver.svg" alt="">
         </div>
 
-        <div class="gold">
+        <div class="gold trophy">
           <img src="../assets/images/gold.svg" alt="">
         </div>
 
-        <div class="bronze">
+        <div class="bronze trophy">
           <img src="../assets/images/bronze.svg" alt="">
         </div>
 
@@ -58,6 +58,15 @@ h1{
   text-align: center;
   color: white;
 }
+
+
+
+
+
+
+
+
+=======
 
 .head {
   background-color: #1c1046;
@@ -161,5 +170,25 @@ h1{
     padding: 10px;
   }
 }
+@media only screen and (max-width: 830px){
+.trophies img{
+  width: 150px;
+}
+.gold img{
+  width: 180px;
+}
+}
 
+  @media only screen and (max-width: 550px){
+    header h1 {
+      font-size: 30px ;
+    }
+.trophies img{
+  width: 135px;
+}
+.gold img{
+  width: 160px;
+}
+    
+  }
 </style>
