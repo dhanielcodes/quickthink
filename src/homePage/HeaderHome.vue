@@ -114,7 +114,7 @@ main button:hover{
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 100px 0;
 }
 .cards .card{
     width: 350px;
