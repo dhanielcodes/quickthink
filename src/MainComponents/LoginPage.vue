@@ -34,7 +34,7 @@ export default {
 
         console.log(existingUser)
 
-        axios.post('http://brainteaser.pythonanywhere.com/user/login')
+        axios.post('https://brainteaser.pythonanywhere.com/user/login')
         .then((response) => {
           console.log(response);
           alert('Successful');
