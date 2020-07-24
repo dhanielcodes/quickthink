@@ -24,7 +24,7 @@
       
     </div>
 
-    <div class="board-data" v-bind:is='fetchBoardData()'>
+    <div class="board-data" v-bind:is='fetchBoardData'>
         <ul id="v-for-board">
           <li v-for="boards in board" :key="boards.user_name">
             {{ boards.user_name }} - {{ boards.game_code }} - {{ boards.score }}
