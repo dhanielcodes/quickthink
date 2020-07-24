@@ -36,7 +36,7 @@
           <input type="name" placeholder="Full Name" v-model="Contact.full_name">
           <input type="email" placeholder="Email Address" v-model="Contact.email">
           <textarea name="" id="" cols="30" rows="10" placeholder="Your Message here.." v-model="Contact.message"></textarea>
-          <button>Send Message</button>
+          <button @click="submitSurvey" >Send Message</button>
       </div>
     </form>
 <Footer></Footer>
@@ -62,9 +62,9 @@ export default {
     submitSurvey() {
 
       let theSurvey = {
-        email = this.Contact.contactEmail,
-        full_name = this.Contact.contactName,
-        message = this.Contact.contactMessage
+        email: this.Contact.contactEmail,
+        full_name: this.Contact.contactName,
+        message: this.Contact.contactMessage
       }
 
       axios.post('https://brainteaser.pythonanywhere.com/user/registration', theSurvey)
