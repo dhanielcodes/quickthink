@@ -33,10 +33,10 @@
     <form @submit.prevent>
       <h1>Contact Us?<br> Send Us a message</h1>
       <div class="input">
-          <input type="name" placeholder="Full Name">
-          <input type="email" placeholder="Email Address">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message here.."></textarea>
-          <button>Send Message</button>
+          <input type="name" placeholder="Full Name" v-model="Contact.full_name">
+          <input type="email" placeholder="Email Address" v-model="Contact.email">
+          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message here.." v-model="Contact.message"></textarea>
+          <button @click="submitSurvey" >Send Message</button>
       </div>
     </form>
 <Footer></Footer>
@@ -45,14 +45,38 @@
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
   data () {
     return {
-
+      Contact: {
+        contactEmail: '',
+        contactName: '',
+        contactMessage: ''
+      }
     }
   },
   methods: {
-    
+    submitSurvey() {
+
+      let theSurvey = {
+        email: this.Contact.contactEmail,
+        full_name: this.Contact.contactName,
+        message: this.Contact.contactMessage
+      }
+
+      axios.post('https://brainteaser.pythonanywhere.com/user/registration', theSurvey)
+        .then((response) => {
+          console.log(response);
+          alert('Thanks for reaching out');
+        })
+        .catch((error) => {
+          console.log(error);
+          alert('An error occured please try again');
+        });
+    }
   }
 }
 </script>
