@@ -25,7 +25,11 @@
     </div>
 
     <div class="board-data" v-bind:is='fetchBoardData'>
-      
+        <ul>
+          <li v-for="board in board">
+            {{ board.user_name }} - {{ board.game_code }} - {{ board.score }}
+          </li>
+        </ul>
     </div>
 
      <Newsletter></Newsletter>
@@ -41,17 +45,20 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      board: '',
+      board: [],
+      loading: false,
     }
   },
   methods: {
     fetchBoardData() {
+      this.loading = true;
       axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard')
       .then((response) => {
         console.log(response);
         alert('working');
         const data = response.data;
         this.board = data;
+        this.loading = false;
       })
       .catch((error) => {
           console.log(error);
