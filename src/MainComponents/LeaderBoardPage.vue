@@ -56,8 +56,8 @@ export default {
       .then((response) => {
         console.log(response);
         alert('working');
-        const data = response.data;
-        this.board = data;
+        this.data = response.data;
+        this.board = this.data;
         this.loading = false;
       })
       .catch((error) => {
