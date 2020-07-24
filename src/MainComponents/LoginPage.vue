@@ -1,28 +1,51 @@
 <template>
 <div>
-    <form action="">
+    <form @submit.prevent>
        <h1>Hey There!</h1>
        <p>Login to access your games</p>
-       <input type="name" placeholder="Name">
-       <input type="password" placeholder="Password">
-       <button>Login</button>
+       <input type="name" placeholder="Name" v-model="User.existingUserName">
+       <input type="password" placeholder="Password" v-model="User.existingUserPassword">
+       <button @click="login">Login</button>
        <p>Don't have an account? <router-link to="/signup"><a href="">Create account</a></router-link> </p>
     </form>
 </div>
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
   data () {
     return {
-
+      User: {
+        existingUserName: '',
+        existingUserPassword: ''
+      }
     }
   },
   methods: {
-    greet: () => {
+      login() {
+
+        let existingUser = {
+          user_name: this.User.existingUserName,
+          password: this.User.existingUserPassword
+        }
+
+        console.log(existingUser)
+
+        // axios.post('http://brainteaser.pythonanywhere.com/user/login')
+        // .then((response) => {
+        //   console.log(response);
+        //   alert('Successful');
+        // })
+        // .catch((error) => {
+        //   console.log(error);
+        //   alert('Login has failed!');
+        // });
+      }
     }
   }
-}
 </script>
 
 <style scoped>
