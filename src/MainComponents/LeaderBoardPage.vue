@@ -1,9 +1,6 @@
 <template>
 <div>
 
-  <header>
-    <h1>LeaderBoard</h1>
-  </header>
 
     <h1 class="head">LeaderBoard</h1>
 
