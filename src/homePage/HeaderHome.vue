@@ -5,9 +5,7 @@
       <aside>
         <h1 class="push">How good are you ?<br>Let's find out..</h1>
         <p class="push">Challenge your brain into thinking, think fast, beat the best of<br>the best in this trilling game</p>
-        <div class="a">
-        <a href="#">Play game</a>
-        </div>
+        <a href="#" target="_blank"><button>Play game</button></a>
       </aside>
       <img class="main-img" src="../assets/images/1996.svg" alt="">
     </main>
@@ -42,6 +40,7 @@ export default {
   data () {
     return {
       name: 'Header',
+      webapp: 'https://www.quickthink.netlify.app'
 
     }
   },
@@ -92,22 +91,20 @@ main p{
   font-family: "DM sans";
   font-size: 20px;
 }
-main a{
-  padding: 15px 30px;
+main button{
   background: #18C5D9;
   color: white;
   font-size: 20px;
-  width: 100%;
   text-decoration: none;
   font-family: 'poppins';
+  border: none;
+  outline: none;
   border-radius: 6px;
-  transition: all .6s;
-}
-main .a{
+  padding: 10px 15px;
+  cursor: pointer;
   transition: all .5s;
-  width: 170px;
 }
-main .a:hover{
+main button:hover{
   transform: rotate(-4deg);
 }
 .cards {
@@ -171,11 +168,6 @@ main .a:hover{
   main h1{
   font-family: "DM sans";
   font-size: 45px;
-  }
-  main .a{
-  transition: all .5s;
-  width: 167px;
-  margin: 0 auto;
   }
 
 }
