@@ -24,7 +24,7 @@ head{
     display: grid;
     place-items: center;
     height: 100vh;
-    animation: close .2s 2s 1 forwards;
+    animation: close .2s 4s 1 forwards;
 }
 @keyframes close {
     to{
@@ -44,9 +44,9 @@ head{
     width: 180px;
     height: 180px;
     border-radius: 200px;
-    border-top: 10px solid white;
+    border-top: 90px solid white;
     background: #18C5D9;
-    animation: rotate 1s 0s infinite linear;
+    animation: rotate 1.2s 0s infinite linear;
 }
 @keyframes rotate {
     to{
