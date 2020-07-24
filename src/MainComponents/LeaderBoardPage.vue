@@ -51,6 +51,10 @@ export default {
         console.log(response);
         alert('working');
         this.board = fetchBoardData()
+      })
+      .catch((error) => {
+          console.log(error);
+          alert('Cannot get leaderboard data!');
       });
     },
 
