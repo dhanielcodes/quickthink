@@ -9,14 +9,14 @@
       <div v-bind:href="web" class="logo">Quick<span>Think</span></div>
       <ul v-bind:class="{open: open}">
         <div  id="nav-links">
-           <router-link to="/"><li><a href="" v-on:click="remove">Home</a></li></router-link> 
-            <router-link to="/categories"><li><a v-on:click="remove">Categories</a></li></router-link> 
-            <router-link to="/leaderboard"><li><a v-on:click="remove">Leaderboard</a></li></router-link> 
-           <router-link to="/about"><li><a v-on:click="remove">About</a></li></router-link> 
+           <router-link to="/" ><li>Home</li></router-link> 
+            <router-link class="router-link-active router-link-exact-active" to="/categories"><li>Categories</li></router-link> 
+            <router-link class="router-link-active router-link-exact-active" to="/leaderboard"><li>LeaderBoard</li></router-link> 
+           <router-link class="router-link-active router-link-exact-active" to="/about"><li>About</li></router-link> 
         </div>
         <div class="entries">
-          <router-link to="/login"><a href="#" class="login" v-on:click="remove">Login</a></router-link>
-         <router-link to="/signup"> <a href="#" class="sign-up" v-on:click="remove">Sign-up</a></router-link>
+          <router-link to="/login"><a href="#" class="login">Login</a></router-link>
+         <router-link to="/signup"> <a href="#" class="sign-up">Sign-up</a></router-link>
         </div>
       </ul>
       
@@ -44,6 +44,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 .space{
   height: 74px;
 }
@@ -79,25 +81,30 @@ nav{
 nav ul{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 70%;
 }
 nav #nav-links{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 50%;
   
 }
 ul li{
   list-style: none;
 }
-ul li a{
+/* .router-link-exact-active{
+  color: #ffffff;
+} */
+.router-link-active{
   text-decoration: none;
   color: black;
-  padding-top: 16px;
+  padding: 10px 0;
   position: relative;
 }
 /* NAV A HOVER FOR NAV A HOVER */
-ul li a::after{
+.router-link-active::after{
   content: '';
   position: absolute;
   width: 0%;
@@ -109,7 +116,7 @@ ul li a::after{
   opacity: 0;
   transform: translateX();
 }
-ul li a:hover::after{
+.router-link-active:hover::after{
   width: 100%;
   opacity: 1;
   left: 0%;
@@ -117,6 +124,9 @@ ul li a:hover::after{
 /* NAV ENTRIES FOR NAV ENTRIES */
 .entries{
   width: auto;
+}
+.entries .router-link-active::after{
+  display: none;
 }
 .entries a{
   text-decoration: none;
@@ -190,7 +200,7 @@ ul li a:hover::after{
   display: flex;
   justify-content: space-around;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   z-index: 9;
   flex-direction: column;
   background: #18C5D9;
@@ -207,8 +217,11 @@ ul.open{
   width: 100%;
   height: 80%;
 }
-nav ul li a{
+.router-link-active{
   font-size: 25px;
+}
+.entries .router-link-active{
+  font-size: 17px;
 }
 }
 </style>
