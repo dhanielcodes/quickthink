@@ -173,7 +173,6 @@ main .a:hover{
   }
   main .a{
   transition: all .5s;
-  background: chartreuse;
   width: 167px;
   margin: 0 auto;
   }

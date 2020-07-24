@@ -1,27 +1,46 @@
 <template>
 <div>
-    <form action="e">
+  <form @submit.prevent>
     <h1>News Letter</h1>
     <p>
        Subscribe to our newsletter and never miss out on our regular updates,<br>
        feature notification and leaderboard standings
     </p>
     <div class="email">
-      <input type="email" placeholder="Email Address"><button>Subscribe</button>
+      <input type="email" placeholder="Email Address" v-model="newsletter"><button @click='submitNewsletter' >Subscribe</button>
     </div>
   </form>
 </div>
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
   data () {
     return {
-
+      newsletter: ''
     }
   },
   methods: {
-    greet: () => {
+    submitNewsletter() {
+
+      let NewsLetter = {
+        email: this.newsletter
+      }
+
+      console.log(NewsLetter);
+
+      axios.post('http://brainteaser.pythonanywhere.com/newsletter/subscribe')
+        .then((response) => {
+          console.log(response);
+          alert('You have successfully subscribed to our newsletter service');
+        })
+        .catch((error) => {
+          console.log(error);
+          alert('Subscription has failed!');
+        });
     }
   }
 }
