@@ -67,7 +67,7 @@ export default {
         message: this.Contact.contactMessage
       }
 
-      axios.post('https://brainteaser.pythonanywhere.com/contactus/send_contact_info/', theSurvey)
+      axios.post('https://brainteaser.pythonanywhere.com/contactus/send_contact_info/', theSurvey) ///contactus/send_contact_info/
         .then((response) => {
           console.log(response);
           alert('Thanks for reaching out');
