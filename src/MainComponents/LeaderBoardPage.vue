@@ -59,15 +59,6 @@ h1{
   color: white;
 }
 
-
-
-
-
-
-
-
-=======
-
 .head {
   background-color: #1c1046;
 }
@@ -116,6 +107,15 @@ h1{
     width: 180px;
     height: auto;
     padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 830px){
+  .trophies img{
+    width: 150px;
+  }
+  .gold img{
+    width: 180px;
   }
 }
 
@@ -170,25 +170,4 @@ h1{
     padding: 10px;
   }
 }
-@media only screen and (max-width: 830px){
-.trophies img{
-  width: 150px;
-}
-.gold img{
-  width: 180px;
-}
-}
-
-  @media only screen and (max-width: 550px){
-    header h1 {
-      font-size: 30px ;
-    }
-.trophies img{
-  width: 135px;
-}
-.gold img{
-  width: 160px;
-}
-    
-  }
 </style>

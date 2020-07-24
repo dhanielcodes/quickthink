@@ -33,7 +33,11 @@ export default {
 
       console.log(NewsLetter);
 
+
       axios.post('https://brainteaser.pythonanywhere.com/newsletter/subscribe')
+
+      axios.post('https://brainteaser.pythonanywhere.com/newsletter/subscribe', NewsLetter)
+
         .then((response) => {
           console.log(response);
           alert('You have successfully subscribed to our newsletter service');
