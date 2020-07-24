@@ -37,7 +37,7 @@ export default {
 
         console.log(theUser)
 
-        axios.post('http://brainteaser.pythonanywhere.com/user/registration')
+        axios.post('https://brainteaser.pythonanywhere.com/user/registration')
         .then((response) => {
           console.log(response);
           alert('Successful');
@@ -71,7 +71,7 @@ form{
   border-radius: 8px;
   background: white;
   opacity: 0;
-  animation:aa  1s 0s 1 forwards;
+  animation:aa  1s 1.1s 1 forwards;
 }
 @keyframes aa {
   from{
