@@ -30,7 +30,7 @@
         odio laoreet aliquet fringilla vitae. Lectus cras sed cursus nunc eget augue mattis donec non. Pellentesque vitae 
         sagittis auctor ipsum et, lorem pharetra pretium.
     </p>
-    <form action="">
+    <form @submit.prevent>
       <h1>Contact Us?<br> Send Us a message</h1>
       <div class="input">
           <input type="name" placeholder="Full Name">
@@ -52,8 +52,7 @@ export default {
     }
   },
   methods: {
-    greet: () => {
-    }
+    
   }
 }
 </script>
