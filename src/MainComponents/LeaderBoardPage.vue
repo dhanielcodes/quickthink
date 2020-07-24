@@ -65,6 +65,9 @@ h1{
 
 
 
+
+=======
+
 .head {
   background-color: #1c1046;
 }
@@ -83,11 +86,14 @@ h1{
   background-color: #574E76;
 }
 
-.trophies img {
+.gold img {
   padding: 50px;
 }
+.silver img, .bronze img {
+  padding: 40px;
+}
 
-.silver, .gold,.bronze {
+.silver, .gold, .bronze {
   border-radius: 50%;
 }
 .trophies {
@@ -95,6 +101,74 @@ h1{
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  
+}
+
+@media only screen and (max-width: 900px) {
+
+  .gold img {
+    width: 250px;
+    height: auto;
+    padding: 35px;
+  }
+
+  .silver img, .bronze img {
+    width: 180px;
+    height: auto;
+    padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .gold img {
+    width: 180px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .silver img, .bronze img {
+    width: 120px;
+    height: auto;
+    padding: 25px;
+    
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .head {
+    font-size: 30px ;
+  }    
+}
+
+@media only screen and (max-width: 500px) {
+
+  .gold img {
+    width: 120px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .silver img, .bronze img {
+    width: 80px;
+    height: auto;
+    padding: 15px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+
+  .gold img {
+    width: 80px;
+    height: auto;
+    padding: 15px;
+  }
+
+  .silver img, .bronze img {
+    width: 60px;
+    height: auto;
+    padding: 10px;
+  }
 }
 @media only screen and (max-width: 830px){
 .trophies img{
