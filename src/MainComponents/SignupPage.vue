@@ -35,13 +35,7 @@ export default {
           password: this.User.newUserPassword
         }
 
-        console.log(theUser)
-
-
-        axios.post('https://brainteaser.pythonanywhere.com/user/registration')
-
         axios.post('https://brainteaser.pythonanywhere.com/user/registration', theUser)
-
         .then((response) => {
           console.log(response);
           alert('Successful');

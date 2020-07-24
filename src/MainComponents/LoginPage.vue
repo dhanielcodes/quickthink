@@ -32,13 +32,7 @@ export default {
           password: this.User.existingUserPassword
         }
 
-        console.log(existingUser)
-
-
-        axios.post('https://brainteaser.pythonanywhere.com/user/login')
-
         axios.post('https://brainteaser.pythonanywhere.com/user/login', existingUser)
-
         .then((response) => {
           console.log(response);
           alert('Successful');
