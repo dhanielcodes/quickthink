@@ -1,5 +1,10 @@
 <template>
 <div>
+
+  <header>
+    <h1>LeaderBoard</h1>
+  </header>
+
     <h1 class="head">LeaderBoard</h1>
 
     <div class="leaderboard">
@@ -41,6 +46,33 @@ export default {
 </script>
 
 <style scoped>
+
+div{
+  height: auto;
+  font-family: "DM sans";
+}
+header{
+  background: #1C1046;
+}
+h1{
+  width: 100%;
+  font-size: 50px;
+  padding: 60px 0;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+  @media only screen and (max-width: 550px){
+    header h1 {
+      font-size: 30px ;
+    }
+
+    
+  }
+
 
 .head {
   background-color: #1c1046;
