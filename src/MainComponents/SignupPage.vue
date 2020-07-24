@@ -38,12 +38,24 @@ form{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
   width: 500px;
   text-align: center;
   padding: 50px;
   border-radius: 8px;
   background: white;
+  opacity: 0;
+  animation:aa  1s 0s 1 forwards;
+}
+@keyframes aa {
+  from{
+    transform: translate(-50%, -40%);
+    opacity: 0;
+  }
+  to{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
 }
 form input{
   width: 100%;
@@ -75,5 +87,10 @@ form button{
 a{
   color: #18C5D9;
   font-weight: 600;
+}
+@media screen and (max-width: 550px){
+  form{
+    width: 96%;
+  }
 }
 </style>

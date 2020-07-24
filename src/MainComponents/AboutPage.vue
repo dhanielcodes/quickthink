@@ -145,6 +145,11 @@ form button{
   width: 100%;
   padding: 0 10px;
   margin: 50px auto;
+  }
 }
-}
+ @media only screen and (max-width: 550px){
+    header .h1 {
+      font-size: 30px ;
+    }
+ }
 </style>
