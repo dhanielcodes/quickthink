@@ -3,6 +3,8 @@
     <QuickThinkHead></QuickThinkHead>
     <instructions></instructions>
     <Download></Download>
+<Footer></Footer>
+
   </div>
 </template>
 

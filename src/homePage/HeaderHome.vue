@@ -20,7 +20,7 @@
       </div>
       <div class="card">
         <img src="../assets/images/Onboardingdesign4.svg" alt="">
-        <p>Share with <br> your friends</p>
+        <p>Share your score with <br> friends and family</p>
       </div>
     </div>
   </header>
@@ -114,13 +114,14 @@ main button:hover{
   flex-wrap: wrap;
   justify-content: space-evenly;
   text-align: center;
-  margin-bottom: 50px;
+  margin: 100px 0;
 }
 .cards .card{
     width: 350px;
     height: 450px;
     display: grid;
-    place-items: center;
+    justify-items: center;
+    align-content: center;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.315);
     border-radius: 10px;
     background: white;
@@ -137,6 +138,8 @@ main button:hover{
 }
 .cards .card p{
     font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
     font-family: 'poppins';
 }
 
