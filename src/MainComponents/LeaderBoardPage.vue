@@ -50,7 +50,7 @@ export default {
       .then((response) => {
         console.log(response);
         alert('working');
-        this.board = fetchBoardData()
+        this.board = fetchBoardData();
       })
       .catch((error) => {
           console.log(error);
