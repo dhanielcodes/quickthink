@@ -1,11 +1,14 @@
 <template>
-  <div>
- <Nav></Nav>
+<div>
+    <div>
+   <Nav></Nav>
     <transition name="view">    
       <router-view></router-view>
     </transition>
-
   </div>
+  <preLoad></preLoad>
+</div>
+
 </template>
 
 <script>

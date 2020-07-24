@@ -10,6 +10,10 @@ import $axios from 'axios'
 import Nav from './Nav.vue'
 Vue.component('Nav', Nav)
 
+//PRELOADER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
+import preloader from './preloader.vue'
+Vue.component('preLoad', preloader)
+
 
 //NEWSLETTER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
 import NewsLetter from './NewsLetter.vue'
