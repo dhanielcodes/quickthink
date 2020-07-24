@@ -24,6 +24,10 @@
       
     </div>
 
+    <div class="board-data" v-bind:is='fetchBoardData'>
+      
+    </div>
+
      <Newsletter></Newsletter>
 <Footer></Footer>
 
@@ -31,14 +35,27 @@
 </template>
 
 <script>
+
+import axios from 'axios'
+
 export default {
   data () {
     return {
-
+      board: '',
     }
   },
   methods: {
-    greet: () => {
+    fetchBoardData() {
+      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard')
+      .then((response) => {
+        console.log(response);
+        alert('working');
+        this.board = fetchBoardData()
+      });
+    },
+
+    beforeMount() {
+      this.fetchBoardData()
     }
   }
 }
