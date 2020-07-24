@@ -68,6 +68,7 @@ footer{
     height: auto;
     background: #1C1046;
     color: white;
+    text-align: left;
 }
 main{
     height: auto;
