@@ -4,7 +4,7 @@
     <transition name="view">    
       <router-view></router-view>
     </transition>
-<Footer></Footer>
+
   </div>
 </template>
 

@@ -39,6 +39,8 @@
           <button>Send Message</button>
       </div>
     </form>
+<Footer></Footer>
+
 </main>
 </template>
 
