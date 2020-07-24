@@ -25,6 +25,8 @@
     </div>
 
      <Newsletter></Newsletter>
+<Footer></Footer>
+
 </div>
 </template>
 
