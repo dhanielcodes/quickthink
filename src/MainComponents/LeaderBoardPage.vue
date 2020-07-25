@@ -56,7 +56,6 @@ export default {
     fetchBoardData() {
       this.loading = true;
       axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard?page=2&page_size=5')
-
       .then((response) => {
         console.log(response.data.results);
         const data = response.data.results;
