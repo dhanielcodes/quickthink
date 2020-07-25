@@ -23,22 +23,11 @@
       </div>
       
     </div>
-<<<<<<< HEAD
-   
     <div class="board-data" >
       <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <li v-for="boards in board">
             <p class="id">{{boards.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{boards.name}}</p><p class="geo">{{boards.address.geo.lng}}</p><p class="score">{{boards.address.geo.lat}}</p>
-=======
-
-    <div class="board-data">
-
-      <button @click="fetchBoardData"> Show LeaderBoard</button>
-        <ul>
-          <li v-for="boards in board">
-            {{ boards.user_name }} - {{ boards.game_code }} - {{ boards.score }}
->>>>>>> 1b029efd440ccf8585dd1b5a20f30d95d2e0440a
           </li>
         </ul>
     </div>
@@ -65,11 +54,8 @@ export default {
   methods: {
     fetchBoardData() {
       this.loading = true;
-<<<<<<< HEAD
       axios.get('https://jsonplaceholder.typicode.com/users')
-=======
-      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard/data')
->>>>>>> 1b029efd440ccf8585dd1b5a20f30d95d2e0440a
+
       .then((response) => {
         console.log(response);
         const data = response.data;
@@ -80,29 +66,12 @@ export default {
           console.log(error);
           alert('Cannot get leaderboard data!');
       });
-<<<<<<< HEAD
     },
-=======
     }
->>>>>>> 1b029efd440ccf8585dd1b5a20f30d95d2e0440a
   }
-}
 </script>
 
 <style scoped>
-
-.board-data {
-  background: chartreuse;
-  color: black;
-  text-align: center;
-}
-
-li {
-  color: black;
-  text-align: center;
-  font-size: 60px;
-}
-
 div{
   height: auto;
   font-family: "DM sans";
@@ -182,7 +151,9 @@ ul{
   width: 90%;
   height: auto;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: #18c6d9;
   overflow: hidden;
  /*  height: 500px; */
 }
@@ -193,15 +164,17 @@ ul li{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: #ffffff ;
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.404);
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 9px;
   margin: 20px 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+ /*  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); */
 }
 ul li p{
   font-weight: 800;
   font-size: 20px;
+  color: rgb(0, 0, 0);
 }
 li img{
   border-radius: 100px;
@@ -259,7 +232,7 @@ li img{
     margin-bottom: 20px;
   }
   ul.fades{
-  height: 1400px;
+  height: 1420px;
 }
 }
 
