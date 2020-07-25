@@ -23,20 +23,14 @@
       </div>
       
     </div>
-
-    <div class="board-data">
-
-      <button @click="fetchBoardData" class="btn"> Show LeaderBoard</button>
-
-      <div>
-        <ol>
+    <div class="board-data" >
+      <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
+        <ul id="v-for-board" v-bind:class="{fades: li}">
           <li v-for="boards in board">
-            
-        <p class="id">{{ boards.id }}</p> <p class="name">{{ boards.name }}</p> <p class="lng">{{ boards.address.geo.lng }}</p> <p class="lat">{{ boards.address.geo.lat }}</p>
+            <p class="id">{{boards.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{boards.name}}</p><p class="geo">{{boards.address.geo.lng}}</p><p class="score">{{boards.address.geo.lat}}</p>
           </li>
-        </ol>
+        </ul>
       </div>
-    </div>
 
      <Newsletter></Newsletter>
 <Footer></Footer>
@@ -53,12 +47,18 @@ export default {
     return {
       board: [],
       loading: false,
+      btn: false,
+      li: false
     }
   },
   methods: {
     fetchBoardData() {
       this.loading = true;
       axios.get('https://jsonplaceholder.typicode.com/users')
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8e89a65ca3ba7152212e448fb228dd5515e63d4c
       .then((response) => {
         console.log(response);
         const data = response.data;
@@ -69,12 +69,13 @@ export default {
           console.log(error);
           alert('Cannot get leaderboard data!');
       });
+    },
     }
   }
-}
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 
 .board-data {
   display: grid;
@@ -122,6 +123,8 @@ li {
   text-align: center;
 }
 
+=======
+>>>>>>> 8e89a65ca3ba7152212e448fb228dd5515e63d4c
 div{
   height: auto;
   font-family: "DM sans";
@@ -173,6 +176,63 @@ h1{
   
 }
 
+.board-data{
+  display: grid;
+  place-items: center;
+  margin: 30px 0;
+}
+.l-dbtn{
+  padding: 20px 30px;
+  display: flex;
+  cursor: pointer;
+  background: #18C5D9;
+  border: none;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 20px;
+  outline: none;
+  color: white;
+  transition: all .5s;
+  text-align: center;
+}
+.fade{
+  opacity: 0;
+  pointer-events: none;
+}
+ul{
+  list-style: none;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  background: #18c6d9;
+  overflow: hidden;
+ /*  height: 500px; */
+}
+ul.fades{
+  height: 500px;
+}
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff ;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 9px;
+  margin: 20px 0;
+ /*  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); */
+}
+ul li p{
+  font-weight: 800;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+li img{
+  border-radius: 100px;
+  width: 50px;
+}
 @media only screen and (max-width: 900px) {
 
   .gold img {
@@ -216,7 +276,17 @@ h1{
 @media only screen and (max-width: 550px){
   .head {
     font-size: 30px ;
-  }    
+  }   
+  li{
+    flex-direction: column;
+    align-items: center;
+  } 
+  li p{
+    margin-bottom: 20px;
+  }
+  ul.fades{
+  height: 1420px;
+}
 }
 
 @media only screen and (max-width: 500px) {
