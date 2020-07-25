@@ -54,7 +54,7 @@ export default {
   methods: {
     fetchBoardData() {
       this.loading = true;
-      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard')
+      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard/data')
       .then((response) => {
         console.log(response);
         alert('working');
@@ -72,6 +72,12 @@ export default {
 </script>
 
 <style scoped>
+
+.board-data {
+  background: chartreuse;
+  color: black;
+  text-align: center;
+}
 
 li {
   color: black;
