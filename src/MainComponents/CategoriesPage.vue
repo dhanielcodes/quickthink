@@ -107,7 +107,6 @@
       </div>
 
        <Newsletter></Newsletter>
-<Footer></Footer>
 
 
     </div>
@@ -130,15 +129,15 @@ export default {
   <style scoped>
   header h1{
   animation:aa  2s 0s 1 forwards;
-}
-@keyframes aa {
-  from{
-    opacity: 0;
   }
-  to{
-    opacity: 1;
+  @keyframes aa {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
   }
-}
 
   header {
     background-color: #1c1046;
@@ -152,6 +151,24 @@ export default {
     font-size: 50px;
     font-family: 'DM sans';
   }
+
+  /* header:after {
+    position: absolute;
+    width: 100%;
+    content:'';
+    top:0;
+    z-index: 20;
+    animation: slide 1s infinite;
+    background: linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(128,186,232,0) 99%, rgba(125,185,232,0) 100%);
+    transform: translateX(100%);
+  }
+
+    @keyframes slide {
+    0% {transform:translateX(-100%);}
+    100% {transform:translateX(100%);}
+  } */
+
+  
 
   .cards-container {
     display: grid;

@@ -27,7 +27,7 @@
       <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <li v-for="boards in board">
-            <p class="id">{{boards.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{boards.name}}</p><p class="geo">{{boards.address.geo.lng}}</p><p class="score">{{boards.address.geo.lat}}</p>
+            <p class="id">{{boards.user_name}}</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{boards.game_code}}</p><p class="score">{{boards.score}}</p>
           </li>
         </ul>
       </div>
@@ -54,11 +54,7 @@ export default {
   methods: {
     fetchBoardData() {
       this.loading = true;
-      axios.get('https://jsonplaceholder.typicode.com/users')
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e89a65ca3ba7152212e448fb228dd5515e63d4c
+      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard')
       .then((response) => {
         console.log(response);
         const data = response.data;
@@ -75,7 +71,6 @@ export default {
 </script>
 
 <style scoped>
-<<<<<<< HEAD
 
 .board-data {
   display: grid;
@@ -123,8 +118,6 @@ li {
   text-align: center;
 }
 
-=======
->>>>>>> 8e89a65ca3ba7152212e448fb228dd5515e63d4c
 div{
   height: auto;
   font-family: "DM sans";
