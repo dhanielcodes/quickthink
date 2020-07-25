@@ -28,7 +28,7 @@
 
       <button @click="fetchBoardData"> Show LeaderBoard</button>
         <ul>
-          <li v-for="boards in board" :key="boards.user_name">
+          <li v-for="boards in board">
             {{ boards.user_name }} - {{ boards.game_code }} - {{ boards.score }}
           </li>
         </ul>
@@ -72,6 +72,12 @@ export default {
 </script>
 
 <style scoped>
+
+li {
+  color: black;
+  text-align: center;
+  font-size: 60px;
+}
 
 div{
   height: auto;
