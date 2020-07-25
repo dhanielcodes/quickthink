@@ -26,8 +26,9 @@
     <div class="board-data" >
       <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
         <ul id="v-for-board" v-bind:class="{fades: li}">
-          <li v-for="boards in board">
-            <p class="id">{{boards.user_name}}</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{boards.game_code}}</p><p class="score">{{boards.score}}</p>
+          <h1 v-if="loading">Loading...</h1>
+          <li v-for="results in board">
+            <p class="id">{{results.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
       </div>
@@ -54,10 +55,10 @@ export default {
   methods: {
     fetchBoardData() {
       this.loading = true;
-      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard')
+      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard?page=2&page_size=5')
       .then((response) => {
-        console.log(response);
-        const data = response.data;
+        console.log(response.data.results);
+        const data = response.data.results;
         this.board = data;
         this.loading = false;
       })
