@@ -23,11 +23,12 @@
       </div>
       
     </div>
-
-    <div class="board-data" v-bind:is='fetchBoardData'>
-        <ul id="v-for-board">
-          <li v-for="boards in board" :key="boards.user_name">
-            {{ boards.user_name }} - {{ boards.game_code }} - {{ boards.score }}
+   
+    <div class="board-data" >
+      <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
+        <ul id="v-for-board" v-bind:class="{fades: li}">
+          <li v-for="boards in board">
+            <p class="id">{{boards.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{boards.name}}</p><p class="geo">{{boards.address.geo.lng}}</p><p class="score">{{boards.address.geo.lat}}</p>
           </li>
         </ul>
     </div>
@@ -47,15 +48,16 @@ export default {
     return {
       board: [],
       loading: false,
+      btn: false,
+      li: false
     }
   },
   methods: {
     fetchBoardData() {
       this.loading = true;
-      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard')
+      axios.get('https://jsonplaceholder.typicode.com/users')
       .then((response) => {
         console.log(response);
-        alert('working');
         const data = response.data;
         this.board = data;
         this.loading = false;
@@ -65,10 +67,6 @@ export default {
           alert('Cannot get leaderboard data!');
       });
     },
-
-    beforeMount() {
-      this.fetchBoardData()
-    }
   }
 }
 </script>
@@ -126,6 +124,59 @@ h1{
   
 }
 
+.board-data{
+  display: grid;
+  place-items: center;
+  margin: 30px 0;
+}
+.l-dbtn{
+  padding: 20px 30px;
+  display: flex;
+  cursor: pointer;
+  background: #18C5D9;
+  border: none;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 20px;
+  outline: none;
+  color: white;
+  transition: all .5s;
+  text-align: center;
+}
+.fade{
+  opacity: 0;
+  pointer-events: none;
+}
+ul{
+  list-style: none;
+  width: 90%;
+  height: auto;
+  text-align: center;
+  padding: 20px 0;
+  overflow: hidden;
+ /*  height: 500px; */
+}
+ul.fades{
+  height: 500px;
+}
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.404);
+  border-radius: 9px;
+  margin: 20px 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+ul li p{
+  font-weight: 800;
+  font-size: 20px;
+}
+li img{
+  border-radius: 100px;
+  width: 50px;
+}
 @media only screen and (max-width: 900px) {
 
   .gold img {
@@ -169,7 +220,17 @@ h1{
 @media only screen and (max-width: 550px){
   .head {
     font-size: 30px ;
-  }    
+  }   
+  li{
+    flex-direction: column;
+    align-items: center;
+  } 
+  li p{
+    margin-bottom: 20px;
+  }
+  ul.fades{
+  height: 1400px;
+}
 }
 
 @media only screen and (max-width: 500px) {
