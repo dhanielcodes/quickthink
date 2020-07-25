@@ -24,9 +24,11 @@
       
     </div>
 
-    <div class="board-data" v-bind:is='fetchBoardData'>
+    <div class="board-data">
+
+      <button @click="fetchBoardData"> Show LeaderBoard</button>
         <ul>
-          <li v-for="boards in board">
+          <li v-for="boards in board" :key="boards.user_name">
             {{ boards.user_name }} - {{ boards.game_code }} - {{ boards.score }}
           </li>
         </ul>
@@ -56,18 +58,14 @@ export default {
       .then((response) => {
         console.log(response);
         alert('working');
-        //this.data = response.data;
-        this.board = response.data;
+        const data = response.data;
+        this.board = data;
         this.loading = false;
       })
       .catch((error) => {
           console.log(error);
           alert('Cannot get leaderboard data!');
       });
-    },
-
-    beforeMount() {
-      this.fetchBoardData()
     }
   }
 }
