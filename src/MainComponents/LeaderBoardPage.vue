@@ -23,12 +23,22 @@
       </div>
       
     </div>
+<<<<<<< HEAD
    
     <div class="board-data" >
       <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <li v-for="boards in board">
             <p class="id">{{boards.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{boards.name}}</p><p class="geo">{{boards.address.geo.lng}}</p><p class="score">{{boards.address.geo.lat}}</p>
+=======
+
+    <div class="board-data">
+
+      <button @click="fetchBoardData"> Show LeaderBoard</button>
+        <ul>
+          <li v-for="boards in board">
+            {{ boards.user_name }} - {{ boards.game_code }} - {{ boards.score }}
+>>>>>>> 1b029efd440ccf8585dd1b5a20f30d95d2e0440a
           </li>
         </ul>
     </div>
@@ -55,7 +65,11 @@ export default {
   methods: {
     fetchBoardData() {
       this.loading = true;
+<<<<<<< HEAD
       axios.get('https://jsonplaceholder.typicode.com/users')
+=======
+      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard/data')
+>>>>>>> 1b029efd440ccf8585dd1b5a20f30d95d2e0440a
       .then((response) => {
         console.log(response);
         const data = response.data;
@@ -66,12 +80,28 @@ export default {
           console.log(error);
           alert('Cannot get leaderboard data!');
       });
+<<<<<<< HEAD
     },
+=======
+    }
+>>>>>>> 1b029efd440ccf8585dd1b5a20f30d95d2e0440a
   }
 }
 </script>
 
 <style scoped>
+
+.board-data {
+  background: chartreuse;
+  color: black;
+  text-align: center;
+}
+
+li {
+  color: black;
+  text-align: center;
+  font-size: 60px;
+}
 
 div{
   height: auto;
