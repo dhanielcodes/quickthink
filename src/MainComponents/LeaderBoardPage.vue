@@ -26,12 +26,16 @@
 
     <div class="board-data">
 
-      <button @click="fetchBoardData"> Show LeaderBoard</button>
-        <ul>
+      <button @click="fetchBoardData" class="btn"> Show LeaderBoard</button>
+
+      <div>
+        <ol>
           <li v-for="boards in board">
-            {{ boards.user_name }} - {{ boards.game_code }} - {{ boards.score }}
+            
+        <p class="id">{{ boards.id }}</p> <p class="name">{{ boards.name }}</p> <p class="lng">{{ boards.address.geo.lng }}</p> <p class="lat">{{ boards.address.geo.lat }}</p>
           </li>
-        </ul>
+        </ol>
+      </div>
     </div>
 
      <Newsletter></Newsletter>
@@ -54,10 +58,9 @@ export default {
   methods: {
     fetchBoardData() {
       this.loading = true;
-      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard/data')
+      axios.get('https://jsonplaceholder.typicode.com/users')
       .then((response) => {
         console.log(response);
-        alert('working');
         const data = response.data;
         this.board = data;
         this.loading = false;
@@ -74,15 +77,49 @@ export default {
 <style scoped>
 
 .board-data {
-  background: chartreuse;
+  display: grid;
+  place-items: center;
   color: black;
+}
+.board-data ul {
+  height: 200px;
+}
+
+ul {
   text-align: center;
 }
 
+p {
+  margin-right: 5px;
+}
 li {
+  display: flex;
   color: black;
   text-align: center;
-  font-size: 60px;
+  align-items: center;
+  font-size: 20px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 15px;
+  border: 1px solid;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+
+.btn{
+  padding: 20px 30px;
+  display: flex;
+  cursor: pointer;
+  background: #18C5D9;
+  border: none;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 20px;
+  outline: none;
+  color: white;
+  transition: all .5s;
+  text-align: center;
 }
 
 div{
