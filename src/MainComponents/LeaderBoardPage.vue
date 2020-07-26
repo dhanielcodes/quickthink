@@ -28,7 +28,7 @@
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <h1 v-if="loading">Loading...</h1>
           <li v-for="results in board">
-            <p class="id">{{results.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
+            <p class="id">{{counter++}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
     </div>
@@ -49,7 +49,8 @@ export default {
       board: [],
       loading: false,
       btn: false,
-      li: false
+      li: false,
+      counter: -499
     }
   },
   methods: {
