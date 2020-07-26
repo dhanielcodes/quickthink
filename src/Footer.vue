@@ -108,6 +108,10 @@ main ul li a{
     color: white;
     position: relative;
 }
+
+.cpop h1 {
+    font-size: 30px;
+}
 a::after{
     position: absolute;
     content: '';
@@ -137,10 +141,10 @@ a:hover::after{
     flex-direction: column;
 }
 @media screen and (max-width: 767px){
-main{
+    main{
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    text-align: center; 
 }
 }
 }
