@@ -28,10 +28,12 @@
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <h1 v-if="loading">Loading...</h1>
           <li v-for="results in board">
-            <p class="id">{{results.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
+            <p class="id">{{count++}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
-    </div>
+
+        <!-- <h1 @click="incrementCounter" style="color:red"> Hello {{count}}</h1> -->
+      </div>
 
      <Newsletter></Newsletter>
 <Footer></Footer>
@@ -49,14 +51,18 @@ export default {
       board: [],
       loading: false,
       btn: false,
-      li: false
+      li: false,
+      count: -499
     }
   },
   methods: {
+    // incrementCounter() {
+    //   let count = this.count++
+    //   console.log(count)
+    // },
     fetchBoardData() {
       this.loading = true;
       axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard?page=2&page_size=5')
-
       .then((response) => {
         console.log(response.data.results);
         const data = response.data.results;
@@ -73,6 +79,51 @@ export default {
 </script>
 
 <style scoped>
+
+.board-data {
+  display: grid;
+  place-items: center;
+  color: black;
+}
+
+
+ul {
+  text-align: center;
+}
+
+p {
+  margin-right: 5px;
+}
+li {
+  display: flex;
+  color: black;
+  text-align: center;
+  align-items: center;
+  font-size: 20px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 15px;
+  border: 1px solid;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+
+.btn{
+  padding: 20px 30px;
+  display: flex;
+  cursor: pointer;
+  background: #18C5D9;
+  border: none;
+  margin: 30px 0;
+  border-radius: 8px;
+  font-size: 20px;
+  outline: none;
+  color: white;
+  transition: all .5s;
+  text-align: center;
+}
+
 div{
   height: auto;
   font-family: "DM sans";
@@ -224,7 +275,7 @@ li img{
     padding-bottom: 5px;
   }   
   li{
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   } 
   li p{
