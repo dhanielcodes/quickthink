@@ -100,7 +100,7 @@
 
         </div>
 
-        <form class="form" action="POST">
+        <form class="form" >
             <input class="btn" type="button" value="Create New Category">
         </form>
           
@@ -173,6 +173,7 @@ export default {
     display: grid;
     place-items: center;
     padding-top: 100px;
+    position: relative;
   }
   
   .cards-container img {
