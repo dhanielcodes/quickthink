@@ -82,3 +82,22 @@ new Vue({
   render: h => h(App)
 })
 
+//ANIMATIONS
+
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.matchMedia({
+  "(max-width: 600px)": function(){
+  
+  }
+})
+gsap.from('.cat', 2, {
+  scrollTrigger: {
+    trigger: '',
+    toggleActions: 'restart'
+},
+  y: '50px',
+  delay: 5,
+  opacity: 0,
+  stagger: 0.7
+})
