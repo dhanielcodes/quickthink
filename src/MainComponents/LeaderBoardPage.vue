@@ -28,7 +28,7 @@
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <h1 v-if="loading">Loading...</h1>
           <li v-for="results in board">
-            <p class="id">{{results.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
+            <p class="id"> {{counter++}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
       </div>
@@ -50,7 +50,7 @@ export default {
       loading: false,
       btn: false,
       li: false,
-      // counter: -499
+      counter: -499
     }
   },
   methods: {
@@ -265,8 +265,7 @@ li img{
 
 @media only screen and (max-width: 550px){
   .head {
-    font-size: 30px ;
-    padding-bottom: 5px;
+    font-size: 30px;
   }   
   li{
     flex-direction: row;
@@ -276,12 +275,15 @@ li img{
     margin-bottom: 20px;
   }
   ul.fades{
-  height: 1420px;
+  height: 500px;
 }
 }
 
 @media only screen and (max-width: 500px) {
 
+   ul.fades{
+  height: 500px;
+  } 
   .gold img {
     width: 120px;
     height: auto;
