@@ -90,9 +90,6 @@ h1{
 
 .head {
   background-color: #1c1046;
-}
-
-.head {
   color: #fff;
   padding: 60px 0px;
   text-align: center;
@@ -224,6 +221,7 @@ li img{
 @media only screen and (max-width: 550px){
   .head {
     font-size: 30px ;
+    padding-bottom: 20px;
   }   
   li{
     flex-direction: column;
