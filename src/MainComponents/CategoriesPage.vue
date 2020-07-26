@@ -2,34 +2,34 @@
 
     <div class="categories">
       <header>
-        <span><h1>Game Categories</h1></span>
+        <span><h1 id="gamee">Game Categories</h1></span>
       </header>
       
       
 
       <div class="cards-container">
-        <div class="row-one">
+        <div class="row-one" >
 
           <div class="row-one-a">
-            <div class="music">
+            <div class="music cat" id="roww">
               <span><img src="../assets/images/music.svg" alt=""></span>
               <p>Music</p>
             </div> 
 
-            <div class="game">
+            <div class="game cat">
               <span><img src="../assets/images/game.svg" alt=""></span>
               <p>Games</p>
               </div>
           </div>
 
-          <div class="row-one-b">
+          <div class="row-one-b ">
 
-            <div class="art">
+            <div class="art cat">
               <span><img src="../assets/images/art.svg" alt=""></span>
               <p>Art</p>
               </div>
 
-            <div class="books">
+            <div class="books cat">
               <span><img src="../assets/images/books.svg" alt=""></span>
               <p>Books</p>
               </div>
@@ -41,12 +41,12 @@
 
           <div class="row-two-a">
 
-            <div class="gadgets">
+            <div class="gadgets cat">
               <span><img src="../assets/images/gadgets.svg" alt=""></span>
               <p>Gadgets</p>
               </div>
               
-            <div class="shopping">
+            <div class="shopping cat">
               <span><img src="../assets/images/shopping.svg" alt=""></span>
               <p>Shopping</p>
               </div>
@@ -55,12 +55,12 @@
 
           <div class="row-two-b">
 
-            <div class="sports">
+            <div class="sports cat">
               <span><img src="../assets/images/sport.svg" alt=""></span>
               <p>Sports</p>
               </div>
 
-            <div class="math">
+            <div class="math cat">
               <span><img src="../assets/images/math.svg" alt=""></span>
               <p>Math</p>
               </div>
@@ -73,12 +73,12 @@
 
           <div class="row-three-a">
 
-            <div class="gifts">
+            <div class="gifts cat">
               <span><img src="../assets/images/gifts.svg" alt=""></span>
               <p>Gifts</p>
               </div>
 
-            <div class="videography">
+            <div class="videography cat">
               <span><img src="../assets/images/videography.svg" alt=""></span>
               <p>videography</p>
               </div>
@@ -86,12 +86,12 @@
 
           <div class="row-three-b">
 
-            <div class="news">
+            <div class="news cat">
               <span><img src="../assets/images/news.svg" alt=""></span>
               <p>News</p>
               </div>
 
-            <div class="cars">
+            <div class="cars cat">
               <span><img src="../assets/images/cars.svg" alt=""></span>
               <p>Cars</p>
               </div>
@@ -107,7 +107,7 @@
       </div>
 
        <Newsletter></Newsletter>
-
+ <Footer></Footer>
 
     </div>
 </template>
@@ -138,7 +138,10 @@ export default {
       opacity: 1;
     }
   }
-
+   .cat{
+     position: relative;
+     cursor: pointer;
+   }
   header {
     background-color: #1c1046;
   }
@@ -210,7 +213,9 @@ export default {
   .cards-container p {
     padding: 15px 0px 16px 0px;
   }
-
+  .music{
+    position: relative;
+  }
   .music img {
     background-color: #ff4d55;
     border-radius: 8px 8px 0px 0px;
