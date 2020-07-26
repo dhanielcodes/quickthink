@@ -86,18 +86,22 @@ new Vue({
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.matchMedia({
-  "(max-width: 600px)": function(){
+// ScrollTrigger.matchMedia({
+//   "(max-width: 600px)": function(){
   
-  }
-})
+//   }
+// })
 gsap.from('.cat', 2, {
   scrollTrigger: {
-    trigger: '',
+    trigger: '.cards-container',
     toggleActions: 'restart'
 },
   y: '50px',
   delay: 5,
   opacity: 0,
-  stagger: 0.7
+  stagger: 0.7,
 })
+
+
+
+

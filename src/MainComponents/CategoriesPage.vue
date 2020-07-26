@@ -101,7 +101,7 @@
         </div>
 
         <form class="form" >
-            <input class="btn" type="button" value="Create New Category">
+            <input class="btn btn-anim" type="button" value="Create New Category">
         </form>
           
       </div>

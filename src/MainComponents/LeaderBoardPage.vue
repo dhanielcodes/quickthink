@@ -1,8 +1,8 @@
 <template>
 <div>
 
-
-    <h1 class="head">LeaderBoard</h1>
+  <div class='h1-div'><h1 class="head">LeaderBoard</h1></div>
+    
 
     <div class="leaderboard">
 
@@ -27,7 +27,7 @@
       <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <h1 v-if="loading">Loading...</h1>
-          <li v-for="results in board">
+          <li v-for="results in board" class="li-anim">
             <p class="id"> {{results.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
@@ -128,20 +128,37 @@ header{
 h1{
   width: 100%;
   font-size: 50px;
-  padding: 60px 0;
   text-align: center;
   color: white;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  position: absolute;
+  display: inline-block;
 }
 
-.head {
+.h1-div {
   background-color: #1c1046;
   color: #fff;
-  padding: 60px 0px;
+  padding: 100px 0px;
   text-align: center;
   font-weight: bold;
   font-size: 50px;
   font-family: 'DM sans';
   margin-bottom: 50px;
+  position: relative;
+  z-index: 0;
+}
+
+.h1-div:after {
+	content:'';
+  top:0;
+	transform:translateX(100%);
+	width:100%;
+	height:220px;
+	position: absolute;
+	z-index:1;
+	animation: slide 1s infinite;
 }
 
 .trophies div {
