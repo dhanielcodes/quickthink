@@ -201,7 +201,7 @@ ul{
  /*  height: 500px; */
 }
 ul.fades{
-  height: 500px;
+  height: auto;
 }
 ul li{
   display: flex;
@@ -269,15 +269,12 @@ li img{
     padding-bottom: 5px;
   }   
   li{
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   } 
   li p{
     margin-bottom: 20px;
   }
-  ul.fades{
-  height: 1420px;
-}
 }
 
 @media only screen and (max-width: 500px) {
