@@ -221,7 +221,7 @@ li img{
 @media only screen and (max-width: 550px){
   .head {
     font-size: 30px ;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
   }   
   li{
     flex-direction: column;
