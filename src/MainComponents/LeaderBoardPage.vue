@@ -31,8 +31,6 @@
             <p class="id">{{count++}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
-
-        <!-- <h1 @click="incrementCounter" style="color:red"> Hello {{count}}</h1> -->
       </div>
 
      <Newsletter></Newsletter>
@@ -56,10 +54,6 @@ export default {
     }
   },
   methods: {
-    // incrementCounter() {
-    //   let count = this.count++
-    //   console.log(count)
-    // },
     fetchBoardData() {
       this.loading = true;
       axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard?page=2&page_size=5')
