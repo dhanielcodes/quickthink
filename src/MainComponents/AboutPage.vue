@@ -1,7 +1,7 @@
 <template>
 <main>
   <header>
-    <h1 class="h1">About</h1>
+    <h1 class="h1" id="about-head">About</h1>
   </header>
     <p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros mauris cum risus semper est 

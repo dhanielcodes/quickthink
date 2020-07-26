@@ -107,7 +107,9 @@
       </div>
 
        <Newsletter></Newsletter>
-        <Footer></Footer>
+
+ <Footer></Footer>
+
 
     </div>
 </template>
@@ -140,6 +142,8 @@ export default {
   }
    .cat{
      position: relative;
+     cursor: pointer;
+
    }
   header {
     background-color: #1c1046;
