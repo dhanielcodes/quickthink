@@ -107,7 +107,9 @@
       </div>
 
        <Newsletter></Newsletter>
+
  <Footer></Footer>
+
 
     </div>
 </template>
@@ -141,6 +143,7 @@ export default {
    .cat{
      position: relative;
      cursor: pointer;
+
    }
   header {
     background-color: #1c1046;
@@ -170,10 +173,7 @@ export default {
     0% {transform:translateX(-100%);}
     100% {transform:translateX(100%);}
   } */
-
-  
-
-  .cards-container {
+.cards-container {
     display: grid;
     place-items: center;
     padding-top: 100px;
@@ -315,4 +315,3 @@ export default {
   }
 
   </style>
-

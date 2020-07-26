@@ -92,12 +92,12 @@ ScrollTrigger.matchMedia({
   }
 })
 gsap.from('.cat', 2, {
-  y: '100px',
+  scrollTrigger: {
+    trigger: '',
+    toggleActions: 'restart'
+},
+  y: '50px',
   delay: 5,
   opacity: 0,
-  stagger: 0.7,
-  scrollTrigger: {
-    trigger: '.row-one',
-    toggleAction: 'restart'
-  }
+  stagger: 0.7
 })
