@@ -28,9 +28,11 @@
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <h1 v-if="loading">Loading...</h1>
           <li v-for="results in board">
-            <p class="id">{{results.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
+            <p class="id">{{count++}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
+
+        <!-- <h1 @click="incrementCounter" style="color:red"> Hello {{count}}</h1> -->
       </div>
 
      <Newsletter></Newsletter>
@@ -49,10 +51,15 @@ export default {
       board: [],
       loading: false,
       btn: false,
-      li: false
+      li: false,
+      count: -499
     }
   },
   methods: {
+    // incrementCounter() {
+    //   let count = this.count++
+    //   console.log(count)
+    // },
     fetchBoardData() {
       this.loading = true;
       axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard?page=2&page_size=5')
@@ -78,9 +85,7 @@ export default {
   place-items: center;
   color: black;
 }
-.board-data ul {
-  height: 200px;
-}
+
 
 ul {
   text-align: center;
@@ -272,7 +277,7 @@ li img{
     font-size: 30px ;
   }   
   li{
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   } 
   li p{
