@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 
-//IMPORT AXIOS LIBRARY(INSTALLED GLOABLLY)
-import $axios from 'axios'
 
 
 //NAV COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)

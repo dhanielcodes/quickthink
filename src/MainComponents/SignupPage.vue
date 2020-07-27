@@ -37,7 +37,7 @@ export default {
 
         axios.post('https://brainteaser.pythonanywhere.com/user/registration', theUser)
         .then((response) => {
-          console.log(response);
+          //console.log(response);
           alert('Successful');
         })
         .catch((error) => {
