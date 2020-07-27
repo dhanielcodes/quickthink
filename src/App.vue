@@ -1,6 +1,10 @@
 <template>
 <div>   
+  <Nav></Nav>
+  <transition>
     <router-view></router-view>
+
+  </transition>
 </div>
 
 </template>
