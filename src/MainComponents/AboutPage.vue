@@ -68,7 +68,7 @@ export default {
 
       axios.post('https://brainteaser.pythonanywhere.com/contactus/send_contact_info/', theSurvey) ///contactus/send_contact_info/
         .then((response) => {
-          //console.log(response);
+          console.log(response);
           alert('Thanks for reaching out');
         })
         .catch((error) => {
