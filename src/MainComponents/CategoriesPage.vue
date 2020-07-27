@@ -100,8 +100,8 @@
 
         </div>
 
-        <form class="form" action="POST">
-            <input class="btn" type="button" value="Create New Category">
+        <form class="form" >
+            <input class="btn btn-anim" type="button" value="Create New Category">
         </form>
           
       </div>
@@ -248,6 +248,7 @@ export default {
     display: grid;
     place-items: center;
     padding-top: 100px;
+    position: relative;
   }
   
   .cards-container img {
