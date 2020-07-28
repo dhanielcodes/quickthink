@@ -7,7 +7,7 @@
        feature notification and leaderboard standings
     </p>
     <div class="email">
-      <input type="email" placeholder="Email Address" v-model="newsletter"><button @click='submitNewsletter' >Subscribe</button>
+      <input type="email" placeholder="Email Address" v-model="newsletter" required><button @click='submitNewsletter' >Subscribe</button>
     </div>
   </form>
 </div>
