@@ -32,9 +32,9 @@
     <form @submit.prevent>
       <h1>Contact Us?<br> Send Us a message</h1>
       <div class="input">
-          <input type="name" placeholder="Full Name" v-model="Contact.contactName">
-          <input type="email" placeholder="Email Address" v-model="Contact.contactEmail">
-          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message here.." v-model="Contact.contactMessage"></textarea>
+          <input type="name" placeholder="Full Name" v-model="Contact.contactName" required>
+          <input type="email" placeholder="Email Address" v-model="Contact.contactEmail" required>
+          <textarea name="" id="" cols="30" rows="10" placeholder="Your Message here.." v-model="Contact.contactMessage" required></textarea>
           <button @click="submitSurvey" >Send Message</button>
       </div>
     </form>
