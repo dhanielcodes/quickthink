@@ -3,8 +3,8 @@
     <form @submit.prevent>
        <h1>Hey There!</h1>
        <p>Login to access your games</p>
-       <input type="name" placeholder="Name" v-model="User.existingUserName">
-       <input type="password" placeholder="Password" v-model="User.existingUserPassword">
+       <input type="name" placeholder="Name" v-model="User.existingUserName" required>
+       <input type="password" placeholder="Password" v-model="User.existingUserPassword" required> 
        <button @click="login">Login</button>
        <p>Don't have an account? <router-link to="/signup"><a href="">Create account</a></router-link> </p>
     </form>
