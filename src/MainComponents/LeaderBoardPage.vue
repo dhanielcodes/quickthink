@@ -28,8 +28,8 @@
       <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <h2 v-if="loading">Loading...</h2>
-          <li v-for="results in board" class="li-anim">
-            <p class="id"> {{results.id}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
+          <li v-for="(results, index) in board" class="li-anim">
+            <p class="id"> {{index+1}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
       </div>
