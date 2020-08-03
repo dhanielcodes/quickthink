@@ -28,7 +28,8 @@ export default {
       Users: {
         newUser: '',
         newUserEmail: '',
-        newUserPassword: ''
+        newUserPassword: '',
+        success: false
       }
     }
   },
