@@ -14,14 +14,13 @@
 <script>
 
 import axios from 'axios'
-
 export default {
   data () {
     return {
       User: {
-        existingUserName: '',
-        existingUserPassword: ''
-      }
+      existingUserName: "",
+      existingUserPassword: ""
+    },
     }
   },
   methods: {
@@ -34,10 +33,14 @@ export default {
 
         axios.post('https://brainteaser.pythonanywhere.com/user/login', existingUser)
         .then((response) => {
-          //console.log(response);
+          const token = response.data.token
+          console.log(response);
+          console.log(token)
+          localStorage.setItem('user-token', token)
           alert('Successful');
         })
         .catch((error) => {
+          localStorage.removeItem('user-token')
           console.log(error);
           alert('Login has failed!');
         });

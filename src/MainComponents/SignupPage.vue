@@ -3,9 +3,9 @@
     <form @submit.prevent>
        <h1>Hey There!</h1>
        <p>Sign up to play cool games</p>
-       <input type="name" placeholder="Name" class="name" v-model="User.newUser">
-       <input type="email" placeholder="Email" class="email" v-model="User.newUserEmail">
-       <input type="password" placeholder="Password" class="password" v-model="User.newUserPassword">
+       <input type="name" placeholder="Name" class="name" v-model="Users.newUser" required>
+       <input type="email" placeholder="Email" class="email" v-model="Users.newUserEmail" required>
+       <input type="password" placeholder="Password" class="password" v-model="Users.newUserPassword" required>
        <button @click='submitForm'>Create Account</button>
        <p>Already have and account? <router-link to="/login"><a href="">Login</a></router-link> </p>
     </form>
@@ -19,7 +19,7 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      User: {
+      Users: {
         newUser: '',
         newUserEmail: '',
         newUserPassword: ''
@@ -30,14 +30,14 @@ export default {
       submitForm() {
 
         let theUser = {
-          username: this.User.newUser,
-          email: this.User.newUserEmail,
-          password: this.User.newUserPassword
+          username: this.Users.newUser,
+          email: this.newUserEmail,
+          password: this.newUserPassword
         }
 
         axios.post('https://brainteaser.pythonanywhere.com/user/registration', theUser)
         .then((response) => {
-          //console.log(response);
+          console.log(response);
           alert('Successful');
         })
         .catch((error) => {

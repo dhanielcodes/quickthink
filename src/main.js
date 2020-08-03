@@ -1,84 +1,80 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import App from './App.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import App from "./App.vue";
+import $axios from "axios";
+import gsap from 'gsap';
 
 
+Vue.use($axios);
 
 //NAV COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
-import Nav from './Nav.vue'
-Vue.component('Nav', Nav)
+import Nav from "./Nav.vue";
+Vue.component("Nav", Nav);
 
 //PRELOADER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
-import preloader from './preloader.vue'
-Vue.component('preLoad', preloader)
-
+import preloader from "./preloader.vue";
+Vue.component("preLoad", preloader);
 
 //NEWSLETTER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
-import NewsLetter from './NewsLetter.vue'
-Vue.component('Newsletter', NewsLetter)
+import NewsLetter from "./NewsLetter.vue";
+Vue.component("Newsletter", NewsLetter);
 
 //FOOTER COMPONENT (LEAVE IT ALONE DON'T TOUCH THIS)
-import Footer from './Footer.vue'
-Vue.component('Footer', Footer)
+import Footer from "./Footer.vue";
+Vue.component("Footer", Footer);
 
-//ALL COMPONENTS MAKING THE PAGE 
+//ALL COMPONENTS MAKING THE PAGE
 
 //IMPORTED HOME COMPONENTS
-import HomePage from './MainComponents/HomePage.vue'
+import HomePage from "./MainComponents/HomePage.vue";
 //--SECTIONS HOME
-import HeaderHome from './homePage/HeaderHome.vue'
-import GettingStarted from './homePage/GettingStarted.vue'
-import Download from './homePage/Download.vue'
-Vue.component('QuickThinkHead', HeaderHome)
-Vue.component('Instructions', GettingStarted)
-Vue.component('Download', Download)
-
-
-
+import HeaderHome from "./homePage/HeaderHome.vue";
+import GettingStarted from "./homePage/GettingStarted.vue";
+import Download from "./homePage/Download.vue";
+Vue.component("QuickThinkHead", HeaderHome);
+Vue.component("Instructions", GettingStarted);
+Vue.component("Download", Download);
 
 //IMPORTED ABOUT COMPONENTS
-import AboutPage from './MainComponents/AboutPage.vue'
+import AboutPage from "./MainComponents/AboutPage.vue";
 //--SECTIONS ABOUT
 
 //IMPORTED LEADER-BOARD COMPONENTS
-import LeaderBoardPage from './MainComponents/LeaderBoardPage.vue'
-
+import LeaderBoardPage from "./MainComponents/LeaderBoardPage.vue";
 
 //IMPORTED CATEGORIES COMPONENTS
-import CategoriesPage from './MainComponents/CategoriesPage.vue'
+import CategoriesPage from "./MainComponents/CategoriesPage.vue";
 //--SECTIONS CATEGORIES
 
-//IMPORTED LOGIN 
-import LoginPage from './MainComponents/LoginPage.vue'
+//IMPORTED LOGIN
+import LoginPage from "./MainComponents/LoginPage.vue";
 
 //IMPORTED SIGNUP
-import SignupPage from './MainComponents/SignupPage.vue'
+import SignupPage from "./MainComponents/SignupPage.vue";
 
 //ROUTER FOR THE SINGLE PAGE SITE
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 let routes = [
-  {path: '/login', component: LoginPage},
-  {path: '/signup', component: SignupPage},
-  {path: '/about', component: AboutPage},
-  {path: '/leaderBoard', component: LeaderBoardPage},
-  {path: '/categories', component: CategoriesPage},
-  {path: '/', component: HomePage}
-]
+  { path: "/login", component: LoginPage },
+  { path: "/signup", component: SignupPage },
+  { path: "/about", component: AboutPage },
+  { path: "/leaderBoard", component: LeaderBoardPage },
+  { path: "/categories", component: CategoriesPage },
+  { path: "/", component: HomePage }
+];
 
 let router = new VueRouter({
   routes,
-  mode: 'history'
-})
-
-
-
+  mode: "history"
+});
 
 new Vue({
-  el: '#app',
+  el: "#app",
+  //store,
   router,
   render: h => h(App)
-})
+});
 
 //ANIMATIONS
 
@@ -86,20 +82,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 // ScrollTrigger.matchMedia({
 //   "(max-width: 600px)": function(){
-  
+
 //   }
 // })
-gsap.from('.cat', 2, {
+gsap.from(".cat", 2, {
   scrollTrigger: {
-    trigger: '.cards-container',
-    toggleActions: 'restart'
-},
-  y: '50px',
+    trigger: ".cards-container",
+    toggleActions: "restart"
+  },
+  y: "50px",
   delay: 5,
   opacity: 0,
-  stagger: 0.7,
-})
-
-
-
-
+  stagger: 0.7
+});

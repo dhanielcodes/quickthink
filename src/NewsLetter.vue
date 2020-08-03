@@ -35,7 +35,7 @@ export default {
 
       axios.post('https://brainteaser.pythonanywhere.com/newsletter/subscribe/', NewsLetter)
         .then((response) => {
-          //console.log(response);
+          console.log(response);
           alert('You have successfully subscribed to our newsletter service');
         })
         .catch((error) => {
