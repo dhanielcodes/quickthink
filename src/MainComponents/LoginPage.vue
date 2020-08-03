@@ -17,47 +17,48 @@
 </template>
 
 <script>
-
-import axios from 'axios'
+import axios from "axios";
 export default {
-  data () {
+  data() {
     return {
       User: {
-      existingUserName: "",
-      existingUserPassword: "",
-      success: false
-    },
-    }
+        existingUserName: "",
+        existingUserPassword: "",
+        success: false,
+      },
+    };
   },
   methods: {
-      login() {
-        let existingUser = {
-          user_name: this.User.existingUserName,
-          password: this.User.existingUserPassword,
-        }
+    login() {
+      let existingUser = {
+        user_name: this.User.existingUserName,
+        password: this.User.existingUserPassword,
+      };
 
-        let success = true
+      let success = true
 
-        axios.post('https://brainteaser.pythonanywhere.com/user/login', existingUser)
+      axios
+        .post("https://brainteaser.pythonanywhere.com/user/login", existingUser)
         .then((response) => {
-          const token = response.data.token
+          const token = response.data.token;
           console.log(response);
-          console.log(token)
-          localStorage.setItem('user-token', token)
-          alert('Successful'); 
+          console.log(token);
+          localStorage.setItem("user-token", token);
+          alert("Successful");
+          
         })
         .catch((error) => {
-          localStorage.removeItem('user-token')
+          localStorage.removeItem("user-token");
           console.log(error);
-          alert('Login has failed!');
+          alert("Login has failed!");
         });
-        
-        if ( success == true) {
-            window.location.href = 'https://quickthink-game.netlify.app/';
-          }
+
+      if (success == true) {
+        window.location.href = "https://quickthink-game.netlify.app/";
       }
-    }
-  }
+    },
+  },
+};
 </script>
 
 <style scoped>
