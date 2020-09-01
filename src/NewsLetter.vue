@@ -30,10 +30,10 @@ export default {
       let NewsLetter = {
         email: this.newsletter
       }
+      this.checkForm()
+      // console.log(NewsLetter);
 
-      console.log(NewsLetter);
-
-      axios.post('https://brainteaser.pythonanywhere.com/newsletter/subscribe/', NewsLetter)
+      axios.post('https://brainteaserdev.pythonanywhere.com/newsletter/subscribe/', NewsLetter)
         .then((response) => {
           console.log(response);
           alert('You have successfully subscribed to our newsletter service');
@@ -42,7 +42,20 @@ export default {
           console.log(error);
           alert('Subscription has failed!');
         });
-    }
+    },
+
+    checkForm(e) {
+      if(!this.newsletter) {
+        alert("Please enter your email")
+      } else if(!this.validEMail(this.newsletter)) {
+        alert("A valid email is required")
+      }
+      e.preventDefault();
+    },
+    validEmail: function (email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
   }
 }
 </script>

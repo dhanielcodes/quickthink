@@ -3,15 +3,9 @@
     <form @submit.prevent>
        <h1>Hey There!</h1>
        <p>Sign up to play cool games</p>
-<<<<<<< HEAD
        <input type="name" placeholder="Name" class="name" v-model="Users.newUser" required>
        <input type="email" placeholder="Email" class="email" v-model="Users.newUserEmail" required>
        <input type="password" placeholder="Password" class="password" v-model="Users.newUserPassword" required>
-=======
-       <input type="name" placeholder="Name" class="name" v-model="User.newUser" required> 
-       <input type="email" placeholder="Email" class="email" v-model="User.newUserEmail" required>
-       <input type="password" placeholder="Password" class="password" v-model="User.newUserPassword" required>
->>>>>>> 9613207975667dfd1ebae8e07ffb406d19fc6361
        <button @click='submitForm'>Create Account</button>
        <p>Already have and account? <router-link to="/login"><a href="">Login</a></router-link> </p>
     </form>
@@ -29,7 +23,7 @@ export default {
         newUser: '',
         newUserEmail: '',
         newUserPassword: '',
-        success: false
+        // success: false
       }
     }
   },
@@ -38,11 +32,11 @@ export default {
 
         let theUser = {
           username: this.Users.newUser,
-          email: this.newUserEmail,
-          password: this.newUserPassword
+          email: this.Users.newUserEmail,
+          password: this.Users.newUserPassword
         }
 
-        axios.post('https://brainteaser.pythonanywhere.com/user/registration', theUser)
+        axios.post('https://brainteaserdev.pythonanywhere.com/user/register/', theUser)
         .then((response) => {
           console.log(response);
           alert('Successful');
