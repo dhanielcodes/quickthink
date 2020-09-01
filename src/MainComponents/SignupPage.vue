@@ -6,10 +6,6 @@
        <input type="name" placeholder="Name" class="name" v-model="Users.newUser" required>
        <input type="email" placeholder="Email" class="email" v-model="Users.newUserEmail" required>
        <input type="password" placeholder="Password" class="password" v-model="Users.newUserPassword" required>
-       <input type="name" placeholder="Name" class="name" v-model="User.newUser" required> 
-       <input type="email" placeholder="Email" class="email" v-model="User.newUserEmail" required>
-       <input type="password" placeholder="Password" class="password" v-model="User.newUserPassword" required>
-
        <button @click='submitForm'>Create Account</button>
        <p>Already have and account? <router-link to="/login"><a href="">Login</a></router-link> </p>
     </form>
