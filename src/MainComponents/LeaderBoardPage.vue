@@ -28,8 +28,8 @@
       <button class="l-dbtn" @click='fetchBoardData' v-on:click="btn = !btn, li = !li" v-bind:class="{fade: btn}">Show leader Board</button>
         <ul id="v-for-board" v-bind:class="{fades: li}">
           <h2 v-if="loading">Loading...</h2>
-          <li v-for="(results, index) in board" class="li-anim">
-            <p class="id"> {{index+1}} .</p><img src="../assets/images/leaderimage.svg" alt=""><p class="name">{{results.user_name}}</p><p class="geo">{{results.game_code}}</p><p class="score">{{results.score}}</p>
+          <li v-for="(results, index) in board" :key="index" class="li-anim">
+            <p class="id"> {{index+1}} .</p><p class="name">{{results.user_name}}</p><p class="score">{{results.score}}</p>
           </li>
         </ul>
       </div>
@@ -57,7 +57,7 @@ export default {
   methods: {
     fetchBoardData() {
       this.loading = true;
-      axios.get('https://brainteaser.pythonanywhere.com/game/leaderboard?page=2&page_size=5')
+      axios.get('https://brainteaserdev.pythonanywhere.com/usergame/leaderboard/paginate?page=1&page_size=10')
       .then((response) => {
         //console.log(response.data.results);
         const data = response.data.results;
@@ -156,17 +156,15 @@ ul {
   text-align: center;
 }
 
-ColorZilla
-Ultimate CSS Gradient Generator from ColorZilla
-A powerful Photoshop-like CSS gradient editor
-p {
+/* p {
   margin-right: 5px;
-}
+} */
 li {
   display: flex;
   color: black;
-  text-align: center;
+  text-align: start;
   align-items: center;
+  width: 100%;
   font-size: 20px;
   overflow: hidden;
   overflow-y: auto;
@@ -174,6 +172,15 @@ li {
   border: 1px solid;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+}
+li p:nth-child(1) {
+  width: 20%;
+}
+li p:nth-child(2) {
+  width: 60%;
+}
+li p:nth-child(3) {
+  width: 20%;
 }
 
 
@@ -359,13 +366,13 @@ li img{
   .head {
     font-size: 30px;
   }   
-  li{
+  /* li{
     flex-direction: column;
     align-items: center;
-  } 
-  li p{
+  }  */
+  /* li p{
     margin-bottom: 20px;
-  }
+  } */
   .shine{
     padding: 60px;
   }
