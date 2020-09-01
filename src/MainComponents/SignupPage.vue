@@ -23,7 +23,7 @@ export default {
         newUser: '',
         newUserEmail: '',
         newUserPassword: '',
-        success: false
+        // success: false
       }
     }
   },
@@ -32,11 +32,11 @@ export default {
 
         let theUser = {
           username: this.Users.newUser,
-          email: this.newUserEmail,
-          password: this.newUserPassword
+          email: this.Users.newUserEmail,
+          password: this.Users.newUserPassword
         }
 
-        axios.post('https://brainteaser.pythonanywhere.com/user/registration', theUser)
+        axios.post('https://brainteaserdev.pythonanywhere.com/user/register/', theUser)
         .then((response) => {
           console.log(response);
           alert('Successful');

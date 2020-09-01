@@ -3,8 +3,8 @@
     <form @submit.prevent>
       <h1>Hey There!</h1>
       <p>Login to access your games</p>
-      <input type="name" placeholder="Name" v-model="User.existingUserName" required />
-      <input type="password" placeholder="Password" v-model="User.existingUserPassword" required />
+      <input type="name" placeholder="Name" v-model="User.userName" required />
+      <input type="password" placeholder="Password" v-model="User.userPassword" required />
       <button @click="login">Login</button>
       <p>
         Don't have an account?
@@ -22,27 +22,25 @@ export default {
   data() {
     return {
       User: {
-        existingUserName: "",
-        existingUserPassword: "",
-        success: false,
+        userName: "",
+        userPassword: "",
       },
     };
   },
   methods: {
     login() {
       let existingUser = {
-        user_name: this.User.existingUserName,
-        password: this.User.existingUserPassword,
+        user_name: this.User.userName,
+        password: this.User.userPassword,
       };
 
-      let success = true
 
       axios
-        .post("https://brainteaser.pythonanywhere.com/user/login", existingUser)
+        .post("https://brainteaserdev.pythonanywhere.com/user/login/", existingUser)
         .then((response) => {
-          const token = response.data.token;
-          console.log(response);
-          console.log(token);
+          // const token = response.data.token;
+          // console.log(response);
+          // console.log(token);
           localStorage.setItem("user-token", token);
           alert("Successful");
           
@@ -53,9 +51,9 @@ export default {
           alert("Login has failed!");
         });
 
-      if (success == true) {
-        window.location.href = "https://quickthink-game.netlify.app/";
-      }
+      // if (success == true) {
+      //   window.location.href = "https://quickthink-game.netlify.app/";
+      // }
     },
   },
 };
